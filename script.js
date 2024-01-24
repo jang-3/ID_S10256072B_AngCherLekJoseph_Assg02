@@ -7,10 +7,10 @@ document.getElementById("contact-submit").addEventListener("click", function (e)
   //[STEP 2]: Let's retrieve form data
   // For now, we assume all information is valid
   // You are to do your own data validation
-  let username = document.getElementById("contact-name").value;
-  let password = document.getElementById("contact-email").value;
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
 
-  //[STEP 3]: Get form values when the user clicks on send
+  //[STEP 3]: Get form va lues when the user clicks on send
   // Adapted from restdb API
   let jsondata = {
     "username": username,
@@ -29,7 +29,7 @@ document.getElementById("contact-submit").addEventListener("click", function (e)
     beforeSend: function () {
       //@TODO use loading bar instead
       // Disable our button or show loading bar
-      document.getElementById("contact-submit").disabled = true;
+      document.getElementById("submit").disabled = true;
       // Clear our form using the form ID and triggering its reset feature
       document.getElementById("add-contact-form").reset();
     }
@@ -50,6 +50,8 @@ document.getElementById("contact-submit").addEventListener("click", function (e)
       getContacts();
     });
 });//end click 
+
+
 
 $("#login-form").submit(function(event) {
   event.preventDefault();
@@ -79,3 +81,21 @@ $("#login-form").submit(function(event) {
     console.log(response);
   });
 });
+
+// When the user scrolls the page, execute myFunction
+window.onscroll = function() {myFunction()};
+
+// Get the navbar
+var navbar = document.getElementById("top-bar");
+
+// Get the offset position of the navbar
+var sticky = navbar.offsetTop;
+
+// Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
