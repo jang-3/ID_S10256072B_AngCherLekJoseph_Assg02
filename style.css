@@ -1,80 +1,200 @@
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #525c3a;
+}
+
+.header {
+    padding: 320px;
+    text-align: center;
+    align-items: center;
+    background-image: url("https://images8.alphacoders.com/117/1174099.jpg");
+    background-size: cover;
+    color: #fff;
+    font-weight: 400;
+    font-size: 40px;
+    letter-spacing: -0.05em;
+}
+
+#top-img{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+#navbar {
+    overflow: hidden;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: 0;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.5s ease, color 0.5s ease;
+    background-color:#a8a570;
 }
 
-header {
-    background-color: #333;
-    color: white;
+#navbar a {
+    float: right;
+    display: flex;
+    color: #fff;
     text-align: center;
-    padding: 10px;
-}
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 10px;
-}
-
-nav ul li a {
-    color: white;
+    padding: 14px 16px;
     text-decoration: none;
+    font-size: 15px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+#navbar a.active {
+    background-color: #04AA6D;
+    color: white;
 }
 
-section {
-    margin-bottom: 50px;
+#content-padding {
+    padding: 10px;
+    padding-left: 120px;
+    padding-right: 120px;
 }
 
-section h2 {
-    margin-bottom: 20px;
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        padding: 0;
-    }
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
 
-    header {
-        background-color: #333;
-        color: white;
-        text-align: center;
-        padding: 10px;
-    }
+.sticky + #content-padding {
+    padding-top: 80px;
+}
 
-    nav ul {
-        list-style-type: none;
-        padding: 0;
-    }
+.content {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    color: #a8a570;
+}
 
-    nav ul li {
-        display: inline;
-        margin-right: 10px;
-    }
+h1, h2, h3, h4 {
+    color: white;
+    font-weight: 400;
+}
 
-    nav ul li a {
-        color: white;
-        text-decoration: none;
-    }
+#container-2, #container-3 p {
+    color: white;
+}
 
-    .container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-    }
+.content > * {
+    margin-bottom: 100px;
+}
 
-    section {
-        margin-bottom: 50px;
-    }
+.benefits {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-    section h2 {
-        margin-bottom: 20px;
+#container {
+    text-align: center;
+    max-width: 370px;
+    border-radius: 10px;
+
+}
+
+.image-desc {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#first-img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+
+.benefits-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#container-2 {
+    text-align: center;
+    background-color: #a8a570;
+    max-width: 520px;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+#container-3 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: black;
+    width: 300px;
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 0px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+
+.explore {
+
+}
+
+.image-price {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.price {
+    position: absolute;
+    margin-left: 185px;
+    font-size: 16px;
+    color: #fff;
+    background-color: black;
+    text-align: right;
+    padding: 14px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    border-radius: 25px;
+}
+
+.furniture-demo {
+    display: flex;
+    justify-content: space-between;
+}
+
+#explore-img {
+    width: 300px;
+    height: 360px;
+    object-fit: cover;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.desc {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    height: 30px;
+    width: 250px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
