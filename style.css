@@ -405,7 +405,7 @@ hr {
 
 .contact-us div {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     background-color: #404a2b;
     border-radius: 20px;
@@ -414,6 +414,7 @@ hr {
     padding-left: 50px;
     padding-right: 50px;
     margin-bottom: 20px;
+    width: 280px;
 }
 
 #contact-us-line:nth-child(1) {
