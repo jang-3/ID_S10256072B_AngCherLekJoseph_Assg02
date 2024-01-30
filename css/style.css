@@ -16,7 +16,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url(images/khaki-living-room.png);
+    background-image: url(css-images/khaki-living-room.png);
     background-size: cover;
     font-weight: 400;
     font-size: 40px;
@@ -507,6 +507,7 @@ footer .partners {
     padding-left: 100px;
     padding-right: 100px;
 }
+
 footer .logo-box {
     padding-top: 0px;
     text-align: center;
