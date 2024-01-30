@@ -34,12 +34,20 @@ body {
     padding: 0px;
 }
 
+#logo-green {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 0px;
+    transform: translateY(40%);
+}
+
 #real-title {
     margin: 0px;
     justify-self: center;
     align-self: center;
     padding: 0px;
     color: black;
+    margin-top: 0px;
     letter-spacing: -2px;
 }
 
@@ -68,6 +76,10 @@ body {
     cursor: pointer;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
+}
+
+#button:hover {
+    
 }
 
 #scroll-down {
@@ -201,20 +213,39 @@ h1, h2, h3, h4 {
 }
 
 #container:nth-child(2) {
-    transition-delay: 120ms;
+    transition-delay: 200ms;
 }
 
 #container:nth-child(3) {
-    transition-delay: 240ms;
+    transition-delay: 400ms;
 }
 
 #container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     max-width: 370px;
     border-radius: 10px;
     margin-left: 40px;
     margin-right: 40px;
+}
 
+#container > * {
+    margin: 0px;
+    padding: 0px;
+}
+
+#container p {
+    margin-top: 20px;
+}
+
+#icon {
+    width: 200px;
+    height: 200px;
+    padding: 0px;
+    margin: 0px;
 }
 
 .image-desc {
@@ -254,7 +285,7 @@ h1, h2, h3, h4 {
 
 #container-2 {
     text-align: left;
-    background-color: #a8a570;
+    background-color: #404a2b;
     padding: 40px;
     border-radius: 10px;
     margin-left: 20px;
@@ -391,6 +422,12 @@ footer li {
     margin-top: 0px;
 }
 
+.ilogo {
+    width: 70px;
+    height: 70px;
+    transform: translateY(-2px);
+}
+
 footer .partners {
     text-align: right;
     display: flex;
@@ -408,12 +445,16 @@ footer .partners {
 }
 footer .logo-box {
     padding-top: 0px;
-    text-align: left;
+    text-align: center;
     padding-bottom: 30px;
+    display: flex;
+    align-items: center;
 }
 
-footer .logo-box a:hover {
-    text-decoration: none;
+#logo2 {
+    color: white;
+    font-size: 25px;
+    transform: translateX(-15px);
 }
 
 footer .logo-box a:hover {
