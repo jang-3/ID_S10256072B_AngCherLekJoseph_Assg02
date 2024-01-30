@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Website</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap" rel="stylesheet">
@@ -14,30 +14,32 @@
     <div>
       </div>
         <div>
-          <img id="logo-green" class="selected" src="interbarter-green.png" alt="logo green"/>
+          <img id="logo-green" class="selected-up" src="images/interbarter-logo-bottom.png" alt="logo green"/>
           <p class="selected" id="real-title">Interbarter</p>
           <p id="subtitle" class="selected">Giving new life to furniture</p>
         </div>
-        <button id="button" class="selected">Get Started</button>
+        <div id="button-div" class="selected">
+          <button id="button">Get Started</button>
+        </div>
         <p id="scroll-down" class="selected">Scroll down</p>
       </div>
     </div>
   </div>
 
   <div id="navbar">
-    <a>Home</a>
-    <a href="javascript:void(0)">News</a>
-    <a href="javascript:void(0)">Contact</a>
+    <a href="#scroll-1">About Us</a>
+    <a href="#scroll-2">Explore</a>
+    <a href="#scroll-3">Contact Us</a>
   </div>
 
   <section class="content" id="content-padding" class="hidden">
     <div class="body-text">
       <h2>The Problem</h2>
       <p>People throw away perfectly good furniture. Furniture is wasted and reduced to trash, when it's value could be much more to others. </p>
-      <p>But what if there was a way to optimise the value of unwanted furniture? That’s where Interbarter comes in – an innovative platform that connects people willing to part with their unwanted items with those looking for something similar.</p>
+      <p id="scroll-1">But what if there was a way to optimise the value of unwanted furniture? That’s where Interbarter comes in – an innovative platform that connects people willing to part with their unwanted items with those looking for something similar.</p>
     </div>
     <section class="image-desc">
-      <img id="first-img" src="interbarter-black-white.png" alt="black and white logo"/>
+      <img id="first-img" src="images/interbarter-black-white.png" alt="black and white logo"/>
       <div>
         <h2>About Us</h2>
         <p>Based in Singapore, we strive for furniture to go unwasted and making the best use for it. We help others around Singapore to use other's furniture, that they may enjoy </p>
@@ -47,17 +49,17 @@
       <h2 class="selected">Why Interbarter?</h2>
       <div>
         <div id="container" class="selected">
-          <img id="icon" src="gift.png" alt="icon-gift"/>
+          <img id="icon" src="images/gift.png" alt="icon-gift"/>
           <h2>Share</h2>
           <p>Give furniture to those who could use it</p>
         </div>
         <div id="container" class="selected">
-          <img id="icon" src="clover.png" alt="icon-clover"/>
+          <img id="icon" src="images/clover.png" alt="icon-clover"/>
           <h2>Earn</h2>
           <p>Gain coins from giving away unwanted furniture</p>
         </div>
         <div id="container" class="selected">
-          <img id="icon" src="cart.png" alt="icon-cart"/>
+          <img id="icon" src="images/cart.png" alt="icon-cart"/>
           <h2>Buy</h2>
           <p>Use coins to purchase your own furniture</p>
         </div>
@@ -66,23 +68,26 @@
     <section class="benefits-2">
       <div id="container-2">
         <div>
-          <h4>Section 1</h4>
+          <h4>Give to Earn</h4>
           <p id="num">01</p>
         </div> 
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+        <p>When you use Interbarter, by giving away unwanted furniture, you receive Clover coins that allow you to purchase other second-hand furniture provided by other users when your goods are purchased. 
+
+          In other words, you gain something by losing nothing.</p>
       </div>
 
       <div id="container-2">
         <div>
-          <h4>Section 2</h4>
+          <h4>Storage Services</h4>
           <p id="num">02</p>
         </div> 
         <hr>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-      </div>
+        <p>We store your furniture for you elsewhere, so you can carry about your daily life not worrying any more about it! Once you submit the furniture, we will arrive to collect it. 
+          No more storage hassels waiting for someone to purchase your things!
+        </p>
     </section>
-
+    <div id="scroll-2"></div>
     <section class="explore">
       <h2>Explore</h2>
       <div class="furniture-demo">
@@ -129,20 +134,21 @@
       </div>
     </section>
     <section class="contact-us">
+      <div id="scroll-3"></div>
       <h2 class="selected">Contact Us</h2>
       <div id="contact-us-line" class="selected">
-        <img id="contact-icon" src="phone-contact-icon.png" alt="icon-phone"/>
+        <img id="contact-icon" src="images/phone-contact-icon.png" alt="icon-phone"/>
         <p>+65 1234 5678</p>
       </div>
       <div id="contact-us-line" class="selected">
-        <img id="contact-icon" src="mail-contact-icon.png" alt="icon-mail"/>
+        <img id="contact-icon" src="images/mail-contact-icon.png" alt="icon-mail"/>
         <p>Interbarter@gmail.com</p>
       </div>
     </section>
   </section>
   <footer> <!-- Footer -->
     <div class="logo-box">
-      <img class = "ilogo" src ="interbarter-black-white.png" alt="ilogo">
+      <img class = "ilogo" src ="images/interbarter-black-white.png" alt="ilogo">
       <a href="#" id="logo2">Interbarter</a>
     </div>
     <div id="footer-spacing">
@@ -166,6 +172,6 @@
       </div>
     </div>
   </footer>
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>

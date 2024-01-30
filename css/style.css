@@ -16,7 +16,7 @@ body {
     align-items: center;
     flex-direction: column;
     justify-content: flex-end;
-    background-image: url(khaki-living-room.png);
+    background-image: url(images/khaki-living-room.png);
     background-size: cover;
     font-weight: 400;
     font-size: 40px;
@@ -38,7 +38,6 @@ body {
     width: 100px;
     height: 100px;
     margin-bottom: 0px;
-    transform: translateY(40%);
 }
 
 #real-title {
@@ -60,8 +59,11 @@ body {
     letter-spacing: -0.2px;
 }
 
-#button {
+#button-div {
     transition-delay: 800ms;
+}
+
+#button {
     margin: 0px;
     margin-bottom: 70px;
     background-color: #525c3a;
@@ -76,10 +78,17 @@ body {
     cursor: pointer;
     border-radius: 30px;
     font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+
+#scroll-1, #scroll-2, #scroll-3 {
+    height: 0px;
+    padding: 0px;
+    margin: 0px;
 }
 
 #button:hover {
-    
+    background-color: black;
 }
 
 #scroll-down {
@@ -127,15 +136,16 @@ section {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 15px;
+    transition: all 0.5s;
 }
+
 
 #navbar:hover{
     background-color: #404a2b;
 }
 
-#navbar a.active {
-    background-color: #04AA6D;
-    color: white;
+#navbar a:hover {
+    color: #a8a570;
 }
 
 #content-padding {
@@ -176,6 +186,12 @@ section {
 
 .selected {
     transform: translateY(10%);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.selected-up {
+    transform: translateY(-20%);
     opacity: 0;
     transition: all 1s;
 }

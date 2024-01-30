@@ -1,3 +1,7 @@
+function scrollToQuestionNode(ids1) {
+	const element4 = document.getElementById(ids1);
+	element4.scrollIntoView({ block: 'end',  behavior: 'smooth' });
+}
 function init(){
 	new SmoothScroll(document,20,35)
 }
@@ -97,3 +101,5 @@ const hiddenElements = document.querySelectorAll('.content > *');
 hiddenElements.forEach((el) => observer.observe(el));
 const hiddenElements2 = document.querySelectorAll('.selected');
 hiddenElements2.forEach((el2) => observer.observe(el2));
+const hiddenElements3 = document.querySelectorAll('.selected-up');
+hiddenElements3.forEach((el3) => observer.observe(el3));
