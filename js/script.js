@@ -1,7 +1,4 @@
-function scrollToQuestionNode(ids1) {
-	const element4 = document.getElementById(ids1);
-	element4.scrollIntoView({ block: 'end',  behavior: 'smooth' });
-}
+
 function init(){
 	new SmoothScroll(document,20,35)
 }

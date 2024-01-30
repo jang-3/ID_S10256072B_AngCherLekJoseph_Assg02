@@ -450,7 +450,7 @@ hr {
 footer {
     background-color: black;
     padding-top: 50px;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
@@ -464,6 +464,7 @@ footer a {
     color: grey;
     text-decoration: none;
     margin: 0 5px;
+    font-size: 17px;
 }
 footer a:hover {
     color: #4eeeff;
@@ -514,6 +515,7 @@ footer .logo-box {
     padding-bottom: 30px;
     display: flex;
     align-items: center;
+    transform: translateY(-27px);
 }
 
 #logo2 {
