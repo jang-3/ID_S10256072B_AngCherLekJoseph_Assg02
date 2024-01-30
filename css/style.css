@@ -530,9 +530,18 @@ footer .logo-box a:hover {
 }
 
 @media (max-width: 768px) {
-    .image-desc, .benefits, .benefits-2, .furniture-demo {
+    .image-desc, .benefits div, .benefits-2, .furniture-demo {
         flex-wrap: wrap;
         max-width: 500px;
+    }
+
+    p {
+        line-height: 150%;
+    }
+
+    #first-img {
+        width: 100%;
+        height: auto;
     }
 
     body {
@@ -541,6 +550,15 @@ footer .logo-box a:hover {
 
     .header {
 
+    }
+
+    .furniture-demo {
+        justify-content: center;
+        align-items: center;
+    }
+
+    #container {
+        margin-top: 40px;
     }
 
 }
