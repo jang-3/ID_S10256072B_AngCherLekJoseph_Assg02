@@ -25,6 +25,7 @@ body {
     overflow-x: hidden;
     padding: 0px;
     padding-bottom: 10px;
+    background-position: center center;
 }
 
 .header div div {
@@ -530,9 +531,44 @@ footer .logo-box a:hover {
 }
 
 @media (max-width: 768px) {
-    .image-desc, .benefits div, .benefits-2, .furniture-demo {
+    .benefits div, .benefits-2, .furniture-demo {
         flex-wrap: wrap;
         max-width: 500px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .image-desc {
+        flex-wrap: wrap;
+    }
+
+    .content {
+        margin-top: 70px;
+    }
+
+    .body-text {
+        margin-bottom: 300px;
+        margin-top: 0px;
+    }
+
+    .benefits-2 {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    #container-2 {
+        margin-bottom: 50px;
+    }
+
+    #scroll-down {
+        transition-delay: 2300ms;
+        margin-top: 150px;
+        color: black;
+        margin-bottom: 35px;
+    }
+
+    .header {
+        padding-bottom: 40px;
     }
 
     p {
@@ -548,6 +584,8 @@ footer .logo-box a:hover {
         overflow-x: hidden !important;
     }
 
+    
+
     .header {
 
     }
@@ -559,6 +597,43 @@ footer .logo-box a:hover {
 
     #container {
         margin-top: 40px;
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px;
+    }
+
+    footer .partner-title {
+        text-align: center;
+        padding: 0px;
+    }
+
+    footer .partners {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        flex-direction: column;
+    }
+
+    .footer .partners-flexitem {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    footer li {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    footer .logo-box #logo {
+        padding-left: 0px;
     }
 
 }

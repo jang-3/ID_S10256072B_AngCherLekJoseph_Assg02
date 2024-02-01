@@ -100,3 +100,20 @@ const hiddenElements2 = document.querySelectorAll('.selected');
 hiddenElements2.forEach((el2) => observer.observe(el2));
 const hiddenElements3 = document.querySelectorAll('.selected-up');
 hiddenElements3.forEach((el3) => observer.observe(el3));
+
+var settings = {
+	"async": true,
+	"crossDomain": true,
+	"url": "https://interbarter-22df.restdb.io/rest/seller",
+	"method": "GET",
+	"headers": {
+	  "content-type": "application/json",
+	  "x-apikey": "<your CORS apikey here>",
+	  "cache-control": "no-cache"
+	}
+  }
+  
+  $.ajax(settings).done(function (response) {
+	console.log(response);
+  });
+  
