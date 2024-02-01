@@ -118,7 +118,20 @@ let settings = {
 
 	.then(response => response.json())
 	.then(function(data) {
-		console.log(data)
-		let name = document.getElementById("desc-1");
-		name.textContent = data[0].name;
+		const containers = document.querySelectorAll('#container-3');
+		for (let i = 0; i < containers.length && i < data.length; i++) {
+		console.log(data[i]);
+		let name = containers[i].querySelector('#desc-1');
+		if (name) {
+			name.textContent = data[i].name;
+		}
+		let image = containers[i].querySelector('#explore-img');
+		if (image) {
+			image.src = data[i].imagelink;
+		}
+		let title = containers[i].querySelector('#desc-title-1');
+		if (title) {
+			title.textContent = data[i].furnituretitle;
+		}
+		}
 	})
