@@ -133,5 +133,9 @@ let settings = {
 		if (title) {
 			title.textContent = data[i].furnituretitle;
 		}
+		let price = containers[i].querySelector('.image-price .price');
+		if (price) {
+		  price.textContent = `${data[i].cost} Coins`;
+		}
 		}
 	})
