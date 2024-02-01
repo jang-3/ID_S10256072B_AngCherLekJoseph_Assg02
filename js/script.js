@@ -101,19 +101,24 @@ hiddenElements2.forEach((el2) => observer.observe(el2));
 const hiddenElements3 = document.querySelectorAll('.selected-up');
 hiddenElements3.forEach((el3) => observer.observe(el3));
 
-var settings = {
-	"async": true,
-	"crossDomain": true,
-	"url": "https://interbarter-22df.restdb.io/rest/seller",
-	"method": "GET",
-	"headers": {
-	  "content-type": "application/json",
-	  "x-apikey": "<your CORS apikey here>",
-	  "cache-control": "no-cache"
+var sellerData = [];
+
+let settings = {
+	method: "GET", //[cher] we will use post to send info
+	headers: {
+	  "Content-Type": "application/json",
+	  "x-apikey": "bee93d606758c722fd30d3df3bcc37f16bc4e",
+	  "Cache-Control": "no-cache"
 	}
-  }
-  
-  $.ajax(settings).done(function (response) {
-	console.log(response);
-  });
-  
+}
+
+
+  //[STEP 5]: Send our AJAX request over to the DB and print response of the RESTDB storage to console.
+  fetch("https://interbarter-22df.restdb.io/rest/seller", settings)
+
+	.then(response => response.json())
+	.then(function(data) {
+		console.log(data)
+		let name = document.getElementById("desc-1");
+		name.textContent = data.name;
+	})
