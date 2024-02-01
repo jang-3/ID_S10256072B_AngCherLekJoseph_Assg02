@@ -107,7 +107,7 @@ let settings = {
 	method: "GET", //[cher] we will use post to send info
 	headers: {
 	  "Content-Type": "application/json",
-	  "x-apikey": "bee93d606758c722fd30d3df3bcc37f16bc4e",
+	  "x-apikey": "65af172e5b0a0385a894cf2c",
 	  "Cache-Control": "no-cache"
 	}
 }
@@ -120,5 +120,5 @@ let settings = {
 	.then(function(data) {
 		console.log(data)
 		let name = document.getElementById("desc-1");
-		name.textContent = data.name;
+		name.textContent = data[0].name;
 	})
