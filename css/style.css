@@ -314,6 +314,10 @@ h1, h2, h3, h4 {
     align-items: center;
 }
 
+p {
+    line-height: 150%;
+}
+
 #container-2 {
     text-align: left;
     background-color: #404a2b;
@@ -321,6 +325,11 @@ h1, h2, h3, h4 {
     border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
+    transition: all 0.5s;
+}
+
+#container-2:hover {
+    background-color: #39412a;
 }
 
 #container-2 div {
@@ -364,6 +373,11 @@ hr {
     padding-top: 20px;
     padding-bottom: 30px;
     flex-wrap: wrap;
+    transition: all 0.5s;
+}
+
+.explore:hover {
+    background-color: #39412a;
 }
 
 .image-price {
@@ -544,6 +558,10 @@ footer .logo-box a:hover {
 
     .content {
         margin-top: 70px;
+    }
+
+    .sticky + #content-padding {
+        padding-top: 80px;
     }
 
     .body-text {
