@@ -23,20 +23,34 @@ let settings = {
   headers: {
     "Content-Type": "application/json",
     "x-apikey": "65af172e5b0a0385a894cf2c",
-    "Cache-Control": "no-cache" }
+    "Cache-Control": "no-cache"
+  }
 };
 
 document.getElementById("submit").addEventListener("click", function(event) {
   event.preventDefault(); // Prevent the form from submitting normally
-  fetch("https://interbarter-22df.restdb.io/rest/username", settings) // Change the endpoint to "/rest/users/login" or the correct collection name
-    .then(response => response.json())
-    .then(function(data) {
-      let userName = document.getElementById("username").value;
-      let password = document.getElementById("password").value;
-      if (userName == data.username && password == data.password) {
+
+  let userName = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
+
+  fetch("https://interbarter-22df.restdb.io/rest/username", settings)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error("HTTP error " + response.status);
+      }
+      return response.json();
+    })
+    .then(data => {
+      let user = data.find(user => user.username === userName && user.password === password);
+      if (user) {
         alert("You are logged in!");
+        window.location.href = `explores.html?userId=${user._id}`;
       } else {
         alert("Wrong username or password");
       }
+    })
+    .catch(error => {
+      console.error("Error:", error);
+      alert("An error occurred while logging in.");
     });
 });
