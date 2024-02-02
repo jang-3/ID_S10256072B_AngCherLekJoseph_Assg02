@@ -5,10 +5,10 @@ html, body {
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
     display: block;
+    color: black;
 }
 
 #navbar {
-    overflow: hidden;
     z-index: 1000;
     left: 0;
     right: 0;
@@ -16,14 +16,13 @@ html, body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    display: flex;
+    display: inline-flex;
     width: 100%;
     height: 80px;
     align-items: center;
     justify-content: space-between;
     background-color: #525c3a;
     transition: all 0.5s;
-    position: fixed;
     padding-left: 100px;
     padding-right: 30px;
 }
@@ -104,3 +103,8 @@ html, body {
     color: white;
 }
 
+#explore {
+    margin: 0px;
+    padding: 0px;
+    display: block;
+}
