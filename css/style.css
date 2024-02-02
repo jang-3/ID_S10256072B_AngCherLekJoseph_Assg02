@@ -82,6 +82,11 @@ body {
     transition: all 0.3s ease-in-out;
 }
 
+#button a {
+    text-decoration: none;
+    color: white;
+}
+
 #scroll-1, #scroll-2, #scroll-3 {
     height: 0px;
     padding: 0px;

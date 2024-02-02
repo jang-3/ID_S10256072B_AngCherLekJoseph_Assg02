@@ -1,0 +1,37 @@
+<!DOCTYPE html
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Website</title>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/login-style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div id="background-container">
+            <div class="login-box">
+                <div>
+                    <div>
+                        <img id="i-logo" class="selected" src="images/white-interbarter-logo.png" alt="logo image">
+                        <p class="selected" id="login-title">Login</p>
+                    </div>
+                    <form>
+                        <div class="selected">
+                            <input type="text" id="username" name="username" placeholder="Username"><br>
+                        </div>
+                        <div class="selected">
+                            <input type="password" id="password" name="password" placeholder="Password"><br>
+                        </div>
+                        <input type="submit" value="Login" class="selected" id="submit">
+                    </form>
+                    <p id="new" class="selected" >New to us? Sign up <a id="underline">here</a></p>
+                </div>
+            </div>
+        </div>
+        <script src="js/login-script.js"></script>
+    </body>
+</html>

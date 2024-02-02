@@ -1,0 +1,135 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+}
+
+p {
+
+}
+
+.selected {
+    transform: translateY(10%);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.selected-up {
+    transform: translateY(-20%);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.show {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1s;
+}
+  
+#background-container {
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-image: url(css-images/khaki-living-room.png);
+    background-size: cover;
+}
+
+#i-logo {
+    width: 100px;
+    height: 100px;
+}
+
+#login-title {
+    transition-delay: 150ms;
+}
+
+form div:nth-child(1) {
+    transition-delay: 300ms;
+}
+
+form div:nth-child(2) {
+    transition-delay: 450ms;
+}
+
+#submit {
+    transition-delay: 600ms;
+}
+
+#new {
+    transition-delay: 750ms;
+}
+
+.background-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+  
+.login-box {
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 30; /* this will ensure that the login form appears above the black overlay */
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-box div, .login-box div form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.login-box div form div {
+    display: flex;
+    align-items: flex-start;
+}
+  
+.login-box input[type="text"], .login-box input[type="password"] {
+    display: block;
+    width: 300px;
+    height: 60px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff; /* this will set the text color to white */
+    background-color: rgba(255, 255, 255, 0); /* this will create a translucent white background */
+    border: 3px solid #595959; /* this will set the border width to 1px and color to #525c3a */
+    border-radius: 10px;
+}
+
+p {
+    color: #A8a671;
+}
+
+#underline {
+    text-decoration:underline;
+    color: white;
+}
+
+.login-box input[type="submit"] {
+    margin-top: 50px;
+    margin-bottom: 70px;
+    background-color: #525c3a;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
+}
+  
+.login-box input[type="submit"]:hover {
+    background-color: black
+}
+
