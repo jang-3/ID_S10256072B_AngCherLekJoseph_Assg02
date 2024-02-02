@@ -104,7 +104,10 @@ html, body {
 }
 
 #explore {
+    padding-top: 10px;
     margin: 0px;
-    padding: 0px;
-    display: block;
+    background-image: url(css-images/khaki-living-room.png);
+    width: 100%;
+    height: 500px;
+    background-size: cover;
 }

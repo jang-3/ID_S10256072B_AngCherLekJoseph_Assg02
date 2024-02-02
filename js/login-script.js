@@ -27,14 +27,27 @@ let settings = {
     }
 };
   
-  document.getElementById("submit").addEventListener("click", function() {
-    fetch("https://interbarter-22df.restdb.io/rest/username", settings)
-      .then(response => response.json())
-      .then(function(data) {
-        let userName = document.getElementById("username").value;
-        let password = document.getElementById("password").value;
-        if (userName == data.username && password == data.password) {
-          alert("You are logged in!");
-        }
+let settings = {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
+    "x-apikey": "65af172e5b0a0385a894cf2c",
+    "Cache-Control": "no-cache",
+    "Access-Control-Allow-Origin": "*" // Add this line to handle CORS
+  }
+};
+
+document.getElementById("submit").addEventListener("click", function(event) {
+  event.preventDefault(); // Prevent the form from submitting normally
+  fetch("https://interbarter-22df.restdb.io/rest/username", settings) // Change the endpoint to "/rest/users/login" or the correct collection name
+    .then(response => response.json())
+    .then(function(data) {
+      let userName = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+      if (userName == data.username && password == data.password) {
+        alert("You are logged in!");
+      } else {
+        alert("Wrong username or password");
+      }
     });
 });
