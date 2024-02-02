@@ -19,22 +19,22 @@ const hiddenElements3 = document.querySelectorAll('.selected-up');
 hiddenElements3.forEach((el3) => observer.observe(el3));
 
 let settings = {
-    method: "GET", //[cher] we will use post to send info
+    method: "GET",
     headers: {
-    "Content-Type": "application/json",
-    "x-apikey": "65af172e5b0a0385a894cf2c",
-    "Cache-Control": "no-cache"
+      "Content-Type": "application/json",
+      "x-apikey": "65af172e5b0a0385a894cf2c",
+      "Cache-Control": "no-cache"
     }
-}
-
-
-//[STEP 5]: Send our AJAX request over to the DB and print response of the RESTDB storage to console.
-document.getElementById("submit").addEventListener("click", function() {
+};
+  
+  document.getElementById("submit").addEventListener("click", function() {
     fetch("https://interbarter-22df.restdb.io/rest/username", settings)
-        .then(response => response.json())
-        .then(function(data) {
-            let userName = document.getElementById("username")["value"];
-            let password = document.getElementById("password")["value"];
-            if userName == data[0].userName
-        });
+      .then(response => response.json())
+      .then(function(data) {
+        let userName = document.getElementById("username").value;
+        let password = document.getElementById("password").value;
+        if (userName == data.username && password == data.password) {
+          alert("You are logged in!");
+        }
+    });
 });
