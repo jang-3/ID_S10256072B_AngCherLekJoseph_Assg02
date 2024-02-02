@@ -1,0 +1,38 @@
+#navbar {
+    overflow: hidden;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background-color: #525c3a;
+    transition: all 0.5s;
+    position: fixed;
+}
+
+#navbar a {
+    float: right;
+    display: flex;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+
+
+#navbar:hover{
+    background-color: #404a2b;
+}
+
+#navbar a:hover {
+    color: #a8a570;
+}
