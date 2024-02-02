@@ -19,15 +19,6 @@ const hiddenElements3 = document.querySelectorAll('.selected-up');
 hiddenElements3.forEach((el3) => observer.observe(el3));
 
 let settings = {
-    method: "GET",
-    headers: {
-      "Content-Type": "application/json",
-      "x-apikey": "65af172e5b0a0385a894cf2c",
-      "Cache-Control": "no-cache"
-    }
-};
-  
-let settings = {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
