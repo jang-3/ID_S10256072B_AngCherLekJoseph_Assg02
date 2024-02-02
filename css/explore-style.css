@@ -1,3 +1,12 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    display: block;
+}
+
 #navbar {
     overflow: hidden;
     z-index: 1000;
@@ -11,10 +20,12 @@
     width: 100%;
     height: 80px;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     background-color: #525c3a;
     transition: all 0.5s;
     position: fixed;
+    padding-left: 100px;
+    padding-right: 30px;
 }
 
 #navbar a {
@@ -26,8 +37,8 @@
     text-decoration: none;
     font-size: 15px;
     transition: all 0.5s;
+    transform: translateX(35px);
 }
-
 
 #navbar:hover{
     background-color: #404a2b;
@@ -36,3 +47,60 @@
 #navbar a:hover {
     color: #a8a570;
 }
+
+#title {
+    color: white;
+}
+
+#logo-white {
+    width: 50px;
+    height: 50px;
+}
+
+#logo-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #647345;
+    padding: 3px 8px;
+    border-radius: 11px;
+    margin-right: 20px;
+}
+#coins {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#coins p {
+    font-size: 20px;
+    margin: 0px;
+    color: white;
+    transform: translateX(-10px);
+}
+
+#profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#profile-name {
+    margin-right: 15px;
+    color: white;
+}
+
