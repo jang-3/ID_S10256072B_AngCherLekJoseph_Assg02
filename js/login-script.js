@@ -23,9 +23,7 @@ let settings = {
   headers: {
     "Content-Type": "application/json",
     "x-apikey": "65af172e5b0a0385a894cf2c",
-    "Cache-Control": "no-cache"
-    "Access-Control-Allow-Origin": "*"
-  }
+    "Cache-Control": "no-cache" }
 };
 
 document.getElementById("submit").addEventListener("click", function(event) {
