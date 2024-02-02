@@ -17,13 +17,14 @@ const hiddenElements2 = document.querySelectorAll('.selected');
 hiddenElements2.forEach((el2) => observer.observe(el2));
 const hiddenElements3 = document.querySelectorAll('.selected-up');
 hiddenElements3.forEach((el3) => observer.observe(el3));
+
 let settings = {
   method: "GET",
   headers: {
     "Content-Type": "application/json",
     "x-apikey": "65af172e5b0a0385a894cf2c",
-    "Cache-Control": "no-cache",
-    "Access-Control-Allow-Origin": "*" // Add this line to handle CORS
+    "Cache-Control": "no-cache"
+    "Access-Control-Allow-Origin": "*"
   }
 };
 
