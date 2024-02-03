@@ -94,7 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hide the original container
     if (lottieLoad) { lottieLoad.style.display = 'none'; }
-    containerElement.querySelector('.container-3:first-of-type').style.display = 'none';
+    containerElement.querySelector('.container-3:first-of-type').style.display = 'none'
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
@@ -129,6 +129,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   })
   .catch(error => console.error('Error:', error));
+
+    // Button click event
+    document.querySelector('#side-button').addEventListener('click', function(){
+      var sidebar = document.querySelector('.sidebar');
+      sidebar.style.left = '0px';
+  });
+      // Close button click event
+      document.querySelector('#close-button').addEventListener('click', function(){
+          var sidebar = document.querySelector('.sidebar');
+          sidebar.style.left = '-500px';
+      });
 })
 
 

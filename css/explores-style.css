@@ -32,6 +32,14 @@ html {
     position: fixed;
 }
 
+.side-button-box {
+    display: none;
+}
+
+.sidebar {
+    display: none;
+}
+
 #navbar a {
     float: right;
     display: flex;
@@ -388,3 +396,98 @@ footer .logo-box a:hover {
     text-decoration: none;
 }
 
+@media (max-width: 768px) {
+
+    #navbar a {
+        display: none;
+    }
+
+    #navbar {
+        max-width: 600px;
+    }
+
+    #logo-group {
+        display: none;
+    }
+
+    .search-container input[type="search"] {
+        padding: 10px 20px;
+    }
+
+    .side-button-box {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        position: absolute;
+        left: 30px;
+        top: 50%; 
+        transform: translateY(-50%);
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -500px; 
+        width: 250px;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: left 0.5s ease-in-out;
+        padding-top: 30px;
+    }
+
+    .side-button-box #side-button {
+        width: 25px;
+        height: 20px;
+        padding: 0px;
+        align-self: center;
+    }
+
+    .sidebar #close-button {
+        width: 25px;
+        height: 25px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        transform: translateX(410%);
+    }
+
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 0px;
+        padding-right: 0px;
+        margin: 0px;
+    }
+
+    footer .partner-title {
+        text-align: center;
+        padding: 0px;
+    }
+
+    footer .partners {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 0px;
+        margin: 0px;
+        flex-direction: column;
+    }
+
+    .footer .partners-flexitem {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    footer li {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+
+    footer .logo-box #logo {
+        padding-left: 0px;
+    }
+
+}
