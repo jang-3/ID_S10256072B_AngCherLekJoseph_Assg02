@@ -18,26 +18,26 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   fetch("https://interbarter-22df.restdb.io/rest/username", settings)
-  .then(response => response.json())
-  .then(function(data) {
-    const userId = urlParams.get("userId");
-    const user = data.find(user => user._id === userId);
-    if (user) {
-      const name = document.querySelector('#profile-name');
-      if (name) {
-        name.textContent = user.username;
+    .then(response => response.json())
+    .then(function(data) {
+      const userId = urlParams.get("userId");
+      const user = data.find(user => user._id === userId);
+      if (user) {
+        const name = document.querySelector('#profile-name');
+        if (name) {
+          name.textContent = user.username;
+        }
+        const coinValue = document.querySelector('#coin-value');
+        if (Value) {
+          coinValue.textContent = `${user.coins} Coins`;
+        }
+        const profilePic = document.querySelector('#profile-pic');
+        if (profilePic) {
+          profilePic.src = user.profileimagelink;
+        }
+      } else {
+        console.log('User not found');
       }
-      const coinValue = document.querySelector('#coin-value');
-      if (Value) {
-        coinValue.textContent = `${user.coins} Coins`;
-      }
-      const profilePic = document.querySelector('#profile-pic');
-      if (profilePic) {
-        profilePic.src = user.profileimagelink;
-      }
-    } else {
-      console.log('User not found');
-    }
   })
   
   fetch("https://interbarter-22df.restdb.io/rest/seller", {
