@@ -8,9 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString)
 
-
-  console.log(userId);
-
   let settings = {
     method: "GET", //[cher] we will use post to send info
     headers: {
