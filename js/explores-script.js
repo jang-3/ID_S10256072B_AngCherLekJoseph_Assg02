@@ -1,9 +1,8 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
 
   const lottieLoad = document.getElementById('lottie-load');
   const containerElement = document.querySelector('.furniture-demo');
+  const searchInput = document.querySelector('.search-container input[type="search"]');
 
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString)
@@ -39,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('User not found');
       }
   })
-  
+
   fetch("https://interbarter-22df.restdb.io/rest/seller", {
     method: "GET",
     headers: {
@@ -95,23 +94,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hide the original container
     if (lottieLoad) { lottieLoad.style.display = 'none'; }
+    containerElement.querySelector('.container-3:first-of-type').style.display = 'none';
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        } else {
+          entry.target.classList.remove('show')
+        }
+      })
+    })
+
+    const hiddenElements = document.querySelectorAll('.container-3');
+    hiddenElements.forEach((el) => observer.observe(el));
+    const hiddenElements2 = document.querySelectorAll('.cloned-container-3');
+    hiddenElements2.forEach((el2) => observer.observe(el2));
+
+    // Add search functionality
+    searchInput.addEventListener('input', () => {
+      const searchTerm = searchInput.value.toLowerCase();
+      const furnitureTitles = document.querySelectorAll('.desc-title-1');
+
+      furnitureTitles.forEach((title) => {
+        if (title.textContent.toLowerCase().includes(searchTerm)) {
+          title.parentElement.parentElement.style.display = 'flex';
+          containerElement.querySelector('.container-3:first-of-type').style.display = 'none';
+        } else {
+          title.parentElement.parentElement.style.display = 'none';
+          containerElement.querySelector('.container-3:first-of-type').style.display = 'none';
+        }
+      });
+    });
+
   })
   .catch(error => console.error('Error:', error));
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('show');
-      } else {
-        entry.target.classList.remove('show')
-      }
-    })
-  })
-  
-  const hiddenElements = document.querySelectorAll('.container-3');
-  hiddenElements.forEach((el) => observer.observe(el));
-  const hiddenElements2 = document.querySelectorAll('.cloned-container-3');
-  hiddenElements2.forEach((el2) => observer.observe(el2));
+})
 
 
-});
+
+
