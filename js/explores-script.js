@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  fetch("https://interter-2.db.io/rest/username", settings)
+  fetch("https://interbarter-22df.restdb.io/rest/username", settings)
   .then(response => response.json())
   .then(function(data) {
     const userId = urlParams.get("userId");
