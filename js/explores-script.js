@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+  const searchbar = document.getElementById("searchbar");
+  var sticky = searchbar.offsetTop;
+  
+  window.onscroll = function() {myFunction()};
+  
+  function myFunction() {
+    if (window.pageYOffset >= sticky) {
+      searchbar.classList.add("sticky")
+    } else {
+      searchbar.classList.remove("sticky");
+    }
+  }
+
   const lottieLoad = document.getElementById('lottie-load');
   const containerElement = document.querySelector('.furniture-demo');
   
@@ -60,5 +74,21 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lottieLoad) { lottieLoad.style.display = 'none'; }
   })
   .catch(error => console.error('Error:', error));
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      } else {
+        entry.target.classList.remove('show')
+      }
+    })
+  })
+  
+  const hiddenElements = document.querySelectorAll('.container-3');
+  hiddenElements.forEach((el) => observer.observe(el));
+  const hiddenElements2 = document.querySelectorAll('.cloned-container-3');
+
+
 });
 

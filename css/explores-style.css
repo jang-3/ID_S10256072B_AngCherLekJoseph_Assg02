@@ -3,17 +3,17 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    overflow: hidden;
     display: block;
     background-color: #525c3a;
 }
 
-body {
+html {
     overflow-y: scroll;
 }
 
+
 #navbar {
-    z-index: 1000;
+    z-index: 1002;
     left: 0;
     right: 0;
     top: 0;
@@ -29,7 +29,7 @@ body {
     transition: all 0.5s;
     padding-left: 100px;
     padding-right: 30px;
-    position: absolute;
+    position: fixed;
 }
 
 #navbar a {
@@ -110,14 +110,107 @@ body {
 
 #explore-0 {
     padding-top: 10px;
+    padding-bottom: 10px;
     margin: 0px;
     background-image: url(css-images/khaki-living-room.png);
+    background-attachment: fixed;
     width: 100%;
     height: 500px;
     background-size: cover;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+}
+
+#explore-0 h1 {
+    font-weight: 400;
+}
+
+#searchbar {
+    overflow: hidden;
+    z-index: 1000;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    display: flex;
+    width: 100%;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: none;
+    transition: all 0.5s;
+    transform: translateY(70px);
+}
+
+.search-container {
+    width: 100%;
+    padding-left: 40px;
+    padding-right: 40px;
+    display: flex;
+    justify-content: center;
+}
+  
+.search-container input[type="search"] {
+    width: 500px;
+    padding: 15px 30px;
+    border: 3px solid rgb(57, 65, 42);
+    border-radius: 40px;
+    font-size: 16px;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(100px);
+}
+
+
+input[type="search"]::placeholder {
+    color: black;
+}
+
+.search-container input[type="search"]:focus {
+    outline: none;
+    border: 3px solid black;
+}
+
+.search-container button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 8px;
+    border: none;
+    background: none;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+
+.search-container button:hover {
+    color: #4CAF50;
+}
+
+.sticky {
+    position: fixed;
+    top: 10px;
+    width: 100%;
+    height: auto;
+    z-index: 1000;
+}
+
+.sticky + #explore {
+    padding-top: 500px;
+}
+
+#explore {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    color: #a8a570;
 }
 
 .furniture-demo {
@@ -131,6 +224,9 @@ body {
 }
 
 .container-3 {
+    transform: translateY(10%);
+    opacity: 0;
+    transition: all 1s;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -145,8 +241,14 @@ body {
     align-items: center;
     border-radius: 10px;
     margin: 20px;
-    transition: all 0.5s;
 
+}
+
+
+.show {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all 1s;
 }
 
 .cloned-container-3 {
