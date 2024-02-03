@@ -95,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Hide the original container
     if (lottieLoad) { lottieLoad.style.display = 'none'; }
-    containerElement.querySelector('.container-3:first-of-type').style.display = 'none';
   })
   .catch(error => console.error('Error:', error));
   
