@@ -1,20 +1,42 @@
-document.addEventListener('DOMContentLoaded', () => {
 
-  const searchbar = document.getElementById("searchbar");
-  var sticky = searchbar.offsetTop;
-  
-  window.onscroll = function() {myFunction()};
-  
-  function myFunction() {
-    if (window.pageYOffset >= sticky) {
-      searchbar.classList.add("sticky")
-    } else {
-      searchbar.classList.remove("sticky");
-    }
-  }
+
+document.addEventListener('DOMContentLoaded', () => {
 
   const lottieLoad = document.getElementById('lottie-load');
   const containerElement = document.querySelector('.furniture-demo');
+
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString)
+  const userId = urlParams.get("userId");
+
+  console.log(userId);
+
+  let settings = {
+    method: "GET", //[cher] we will use post to send info
+    headers: {
+      "Content-Type": "application/json",
+      "x-apikey": "65af172e5b0a0385a894cf2c",
+      "Cache-Control": "no-cache"
+    }
+  }
+
+  fetch(`https://interbarter22df.db.io//username?q={_id": "${userId}"}`, settings)
+  .then(response => response.json())
+  .then(function(data) {
+    const user = data[0]; // assuming that the data is an array with one user object
+    const name = document.querySelector('#profile-name');
+    if (name) {
+      name.textContent = user.username;
+    }
+    const coinValue = document.querySelector('#coin-value');
+    if (coinValue) {
+      coinValue.textContent = `${user.coins} Coins`;
+    }
+    const profilePic = document.querySelector('#profile-pic');
+    if (profilePic) {
+      profilePic.src = user.profileimagelink;
+    }
+  })
   
   fetch("https://interbarter-22df.restdb.io/rest/seller", {
     method: "GET",
@@ -74,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     containerElement.querySelector('.container-3:first-of-type').style.display = 'none';
   })
   .catch(error => console.error('Error:', error));
-
+  
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -92,4 +114,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 });
-
