@@ -70,8 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Hide the original container
-    containerElement.querySelector('.container-3:first-of-type').style.display = 'none';
     if (lottieLoad) { lottieLoad.style.display = 'none'; }
+    containerElement.querySelector('.container-3:first-of-type').style.display = 'none';
   })
   .catch(error => console.error('Error:', error));
 
@@ -88,6 +88,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const hiddenElements = document.querySelectorAll('.container-3');
   hiddenElements.forEach((el) => observer.observe(el));
   const hiddenElements2 = document.querySelectorAll('.cloned-container-3');
+  hiddenElements2.forEach((el2) => observer.observe(el2));
 
 
 });
