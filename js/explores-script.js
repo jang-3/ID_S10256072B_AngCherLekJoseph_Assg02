@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString)
-  const userId = urlParams.get("userId");
+
 
   console.log(userId);
 
@@ -20,21 +20,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  fetch(`https://interbarter22df.db.io//username?q={_id": "${userId}"}`, settings)
+  fetch("https://interter-2.db.io/rest/username", settings)
   .then(response => response.json())
   .then(function(data) {
-    const user = data[0]; // assuming that the data is an array with one user object
-    const name = document.querySelector('#profile-name');
-    if (name) {
-      name.textContent = user.username;
-    }
-    const coinValue = document.querySelector('#coin-value');
-    if (coinValue) {
-      coinValue.textContent = `${user.coins} Coins`;
-    }
-    const profilePic = document.querySelector('#profile-pic');
-    if (profilePic) {
-      profilePic.src = user.profileimagelink;
+    const userId = urlParams.get("userId");
+    const user = data.find(user => user._id === userId);
+    if (user) {
+      const name = document.querySelector('#profile-name');
+      if (name) {
+        name.textContent = user.username;
+      }
+      const coinValue = document.querySelector('#coin-value');
+      if (Value) {
+        coinValue.textContent = `${user.coins} Coins`;
+      }
+      const profilePic = document.querySelector('#profile-pic');
+      if (profilePic) {
+        profilePic.src = user.profileimagelink;
+      }
+    } else {
+      console.log('User not found');
     }
   })
   
