@@ -149,6 +149,9 @@ body {
 
 }
 
+.cloned-container-3 {
+    display: block;
+}
 
 .explore-img {
     bottom: 70px;
@@ -165,6 +168,10 @@ body {
 }
 
 #explore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .image-price {

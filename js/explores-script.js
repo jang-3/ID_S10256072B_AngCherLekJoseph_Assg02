@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+  const lottieLoad = document.getElementById('lottie-load');
   const containerElement = document.querySelector('.furniture-demo');
-
+  
   fetch("https://interbarter-22df.restdb.io/rest/seller", {
     method: "GET",
     headers: {
@@ -9,12 +10,12 @@ document.addEventListener('DOMContentLoaded', () => {
       "Cache-Control": "no-cache"
     }
   })
-
   .then(response => response.json())
   .then(data => {
     data.forEach((item, index) => {
       const newContainer = document.createElement('div');
-      newContainer.classList.add('cloned-container-3');
+      newContainer.classList.add('cloned-container-3'); 
+      newContainer.style.display = 'block';
 
       // Copy the contents of the original container to the new container
       const clone = containerElement.querySelector('.container-3').cloneNode(true);
@@ -44,12 +45,20 @@ document.addEventListener('DOMContentLoaded', () => {
         newImageLink.src = item.imagelink;
       }
 
+      // Add event listener to new container
+      newContainer.addEventListener('click', () => {
+        const id = newContainer.dataset._id;
+        window.open(`/furniture-details.html?id=${id}`);
+      });
+
       // Append the new container-3 element to the furniture-demo element
       containerElement.appendChild(newContainer);
     });
 
     // Hide the original container
     containerElement.querySelector('.container-3:first-of-type').style.display = 'none';
+    if (lottieLoad) { lottieLoad.style.display = 'none'; }
   })
   .catch(error => console.error('Error:', error));
 });
+
