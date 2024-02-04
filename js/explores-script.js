@@ -90,6 +90,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
       // Append the new container-3 element to the furniture-demo element
       containerElement.appendChild(newContainer);
+
+      document.querySelector('#expl').addEventListener('click', function(){
+        window.location.href = `explores.html?userId=${user._id}`;
+      });
+    
+      document.querySelector('#notif').addEventListener('click', function(){
+        window.location.href = `notifications.html?userId=${user._id}`;
+      });
+  
+      document.querySelector('.login').addEventListener('click', function(){
+        window.location.href = `explores.html?userId=${user._id}`;
+      });
+    
+      document.querySelector('.about-us').addEventListener('click', function(){
+        window.location.href = `notifications.html?userId=${user._id}`;
+      });
     });
 
     // Hide the original container
@@ -141,22 +157,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#close-button').addEventListener('click', function(){
         var sidebar = document.querySelector('.sidebar');
         sidebar.style.left = '-500px';
-    });
-
-    document.querySelector('#expl').addEventListener('click', function(){
-      window.location.href = `explores.html?userId=${userId}`;
-    });
-  
-    document.querySelector('#notif').addEventListener('click', function(){
-      window.location.href = `notifications.html?userId=${userId}`;
-    });
-
-    document.querySelector('#login').addEventListener('click', function(){
-      window.location.href = `explores.html?userId=${userId}`;
-    });
-  
-    document.querySelector('#about-us').addEventListener('click', function(){
-      window.location.href = `notifications.html?userId=${userId}`;
     });
 });
 

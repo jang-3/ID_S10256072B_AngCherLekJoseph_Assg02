@@ -49,7 +49,6 @@ html {
     text-decoration: none;
     font-size: 15px;
     transition: all 0.5s;
-    transform: translateX(35px);
 }
 
 #navbar:hover{
@@ -430,8 +429,21 @@ footer .logo-box a:hover {
         overflow-x: hidden;
     }
 
-    #navbar a {
+    #navbar #wallet, #navbar #notif, #navbar #expl{
         display: none;
+    }
+
+    .sidebar a {
+        display: flex;
+    }
+
+    .sidebar a {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .sidebar {
     }
 
     #profile {
