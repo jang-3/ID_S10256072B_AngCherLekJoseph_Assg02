@@ -417,6 +417,7 @@ footer .logo-box a:hover {
     #sidebar-logo {
         width: 50px;
         height: 50px;
+        align-self: center;
     }
 
     .login, .about-us, .contact-us{
@@ -436,6 +437,10 @@ footer .logo-box a:hover {
         margin-right: 20px;
     }
 
+    button {
+        background-color: none;
+    }
+
     .side-button-box {
         display: flex;
         justify-content: left;
@@ -452,7 +457,7 @@ footer .logo-box a:hover {
         left: -500px; 
         width: 250px;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.8);
+        background-color: rgba(81, 92, 58, 0.8);
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
