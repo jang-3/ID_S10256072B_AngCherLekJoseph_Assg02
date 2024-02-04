@@ -481,7 +481,7 @@ footer .logo-box a:hover {
         transition: all 0.5s;
     }
 
-    button:hover {
+    .sidebar a:hover {
         background-color: black;
     }
 

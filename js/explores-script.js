@@ -135,19 +135,28 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('#side-button').addEventListener('click', function(){
       var sidebar = document.querySelector('.sidebar');
       sidebar.style.left = '0px';
-  });
-      // Close button click event
-      document.querySelector('#close-button').addEventListener('click', function(){
-          var sidebar = document.querySelector('.sidebar');
-          sidebar.style.left = '-500px';
-      });
+    });
+    
+    // Close button click event
+    document.querySelector('#close-button').addEventListener('click', function(){
+        var sidebar = document.querySelector('.sidebar');
+        sidebar.style.left = '-500px';
+    });
+
+    document.querySelector('#expl').addEventListener('click', function(){
+      window.location.href = `explores.html?userId=${userId}`;
+    });
+  
+    document.querySelector('#notif').addEventListener('click', function(){
+      window.location.href = `notifications.html?userId=${userId}`;
+    });
 
     document.querySelector('#login').addEventListener('click', function(){
-      window.open(`/explore.html?id=${userId}`);
+      window.location.href = `explores.html?userId=${userId}`;
     });
   
     document.querySelector('#about-us').addEventListener('click', function(){
-      window.open(`/notifications.html?id=${userId}`);
+      window.location.href = `notifications.html?userId=${userId}`;
     });
 });
 
