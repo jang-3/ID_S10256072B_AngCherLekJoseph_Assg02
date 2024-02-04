@@ -128,14 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
   })
-
-  document.querySelector('#login').addEventListener('click', function(){
-    window.open(`/explore.html?id=${userId}`);
-  });
-
-  document.querySelector('#about-us').addEventListener('click', function(){
-    window.open(`/notifications.html?id=${userId}`);
-  });
   
   .catch(error => console.error('Error:', error));
 
@@ -149,7 +141,17 @@ document.addEventListener('DOMContentLoaded', () => {
           var sidebar = document.querySelector('.sidebar');
           sidebar.style.left = '-500px';
       });
-})
+
+    document.querySelector('#login').addEventListener('click', function(){
+      window.open(`/explore.html?id=${userId}`);
+    });
+  
+    document.querySelector('#about-us').addEventListener('click', function(){
+      window.open(`/notifications.html?id=${userId}`);
+    });
+});
+
+
 
 
 
