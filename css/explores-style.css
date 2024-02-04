@@ -414,6 +414,28 @@ footer .logo-box a:hover {
         padding: 10px 20px;
     }
 
+    #sidebar-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .login, .about-us, .contact-us{
+        border: none;
+        outline: none;
+        background-color: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        padding: 6px 24px;
+        text-decoration: none;
+        font-size: 16px;
+        transition: background-color 0.5s ease, color 0.5s ease;
+        font-family: 'Space Grotesk', sans-serif;
+        margin: 10px;
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
     .side-button-box {
         display: flex;
         justify-content: left;
