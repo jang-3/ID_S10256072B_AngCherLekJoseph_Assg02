@@ -434,23 +434,19 @@ footer .logo-box a:hover {
     .login, .about-us, .contact-us{
         border: none;
         outline: none;
-        background-color: none;
         border-radius: 5px;
         color: white;
         cursor: pointer;
         padding: 6px 24px;
         text-decoration: none;
         font-size: 16px;
-        transition: background-color 0.5s ease, color 0.5s ease;
-        font-family: 'Space Grotesk', sans-serif;
-        margin: 10px;
+        margin: 5px;
         margin-left: 20px;
         margin-right: 20px;
+        background-color: #404a2b;
     }
 
-    button {
-        background-color: none;
-    }
+  
 
     .side-button-box {
         display: flex;
@@ -477,7 +473,7 @@ footer .logo-box a:hover {
     }
 
     .side-button-box #side-button {
-        width: 25px;
+        width: 30px;
         height: 30px;
         padding: 0px;
         align-self: center;

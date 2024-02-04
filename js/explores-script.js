@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
         const coinValue = document.querySelector('#coin-value');
         if (coinValue) {
-          coinValue.textContent = `${user.coins} Coins`;
+          coinValue.textContent = user.coins;
         }
         const profilePic = document.querySelector('#profile-pic');
         if (profilePic) {
