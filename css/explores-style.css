@@ -92,9 +92,15 @@ html {
     margin-right: 20px;
 }
 #coins {
+    justify-content: center;
+    align-items: center;
+}
+
+#coins2 {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: white;
 }
 
 #coins p {
@@ -105,6 +111,13 @@ html {
 }
 
 #profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#clover-pic {
     width: 40px;
     height: 40px;
     border-radius: 5px;
@@ -396,7 +409,22 @@ footer .logo-box a:hover {
     text-decoration: none;
 }
 
+.top-bar-coins {
+    display: flex;
+}
+
 @media (max-width: 768px) {
+
+    #clover-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        margin-right: 0px;
+    }
+
+    #coins2 {
+        margin-bottom: 10px;
+    }
 
     html, body {
         overflow-x: hidden;
@@ -408,10 +436,16 @@ footer .logo-box a:hover {
 
     #profile {
         align-self: center;
+        width: auto;
+        margin-right: 0px;
     }
 
     #navbar {
         max-width: 600px;
+    }
+
+    #profile-bar {
+        justify-content: flex-end;
     }
 
     #logo-group {
