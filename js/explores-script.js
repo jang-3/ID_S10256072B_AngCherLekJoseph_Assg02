@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+
   fetch("https://interbarter-22df.restdb.io/rest/username", settings)
     .then(response => response.json())
     .then(function(data) {
@@ -38,21 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('User not found');
       }
 
-      document.querySelector('#expl').addEventListener('click', function(){
-        window.location.href = `explores.html?userId=${userId}`;
-      });
-    
-      document.querySelector('#notif').addEventListener('click', function(){
-        window.location.href = `notifications.html?userId=${user._id}`;
-      });
-  
-      document.querySelector('.login').addEventListener('click', function(){
-        window.location.href = `explores.html?userId=${user._id}`;
-      });
-    
-      document.querySelector('.about-us').addEventListener('click', function(){
-        window.location.href = `notifications.html?userId=${user._id}`;
-      });
   })
 
   fetch("https://interbarter-22df.restdb.io/rest/seller", {
@@ -102,6 +88,24 @@ document.addEventListener('DOMContentLoaded', () => {
       newContainer.addEventListener('click', () => {
         const id = newContainer.dataset._id;
         window.open(`/furniture-details.html?id=${id}`);
+      });
+
+      document.querySelector('#expl').addEventListener('click', function(){
+        alert('Works')
+        window.location.href = `explores.html?userId=${user._id}`;
+      });
+    
+      document.querySelector('#notif').addEventListener('click', function(){
+        alert('Works')
+        window.open(`/notifications.html?userId=${user._id}`);
+      });
+  
+      document.querySelector('.login').addEventListener('click', function(){
+        window.location.href = `explores.html?userId=${user._id}`;
+      });
+    
+      document.querySelector('.about-us').addEventListener('click', function(){
+        window.location.href = `notifications.html?userId=${user._id}`;
       });
 
       // Append the new container-3 element to the furniture-demo element
