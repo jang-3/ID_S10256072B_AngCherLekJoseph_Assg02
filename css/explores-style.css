@@ -128,6 +128,12 @@ html {
     color: white;
 }
 
+.selected {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 1s;
+}
+
 #explore-0 {
     padding-top: 10px;
     padding-bottom: 10px;

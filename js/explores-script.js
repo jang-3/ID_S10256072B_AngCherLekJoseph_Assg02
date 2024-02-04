@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     hiddenElements.forEach((el) => observer.observe(el));
     const hiddenElements2 = document.querySelectorAll('.cloned-container-3');
     hiddenElements2.forEach((el2) => observer.observe(el2));
-
+    
     // Add search functionality
     searchInput.addEventListener('input', () => {
       const searchTerm = searchInput.value.toLowerCase();

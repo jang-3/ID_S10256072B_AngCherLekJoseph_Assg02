@@ -1,0 +1,264 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: block;
+    background-color: #525c3a;
+}
+
+html {
+    overflow-y: scroll;
+}
+
+
+#navbar {
+    z-index: 1002;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: inline-flex;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #525c3a;
+    transition: all 0.5s;
+    padding-left: 100px;
+    padding-right: 30px;
+    position: fixed;
+}
+
+.side-button-box {
+    display: none;
+}
+
+.sidebar {
+    display: none;
+}
+
+#navbar a {
+    float: right;
+    display: flex;
+    color: #fff;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    transition: all 0.5s;
+}
+
+#navbar:hover{
+    background-color: #404a2b;
+}
+
+#navbar a:hover {
+    color: #a8a570;
+}
+
+#title {
+    color: white;
+}
+
+#logo-white {
+    width: 50px;
+    height: 50px;
+}
+
+#logo-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#profile-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+#profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #647345;
+    padding: 3px 8px;
+    border-radius: 11px;
+    margin-right: 20px;
+}
+#coins {
+    justify-content: center;
+    align-items: center;
+}
+
+#coins2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#coins p {
+    font-size: 20px;
+    margin: 0px;
+    color: white;
+    transform: translateX(-10px);
+}
+
+#profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#clover-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#profile-name {
+    margin-right: 15px;
+    color: white;
+}
+
+.selected {
+    transform: translateY(-100px);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.top-bar-coins {
+    display: flex;
+}
+
+@media (max-width: 768px) {
+
+
+
+    #clover-pic {
+        width: 40px;
+        height: 40px;
+        border-radius: 5px;
+        margin-right: 0px;
+    }
+
+    #coins2 {
+        margin-bottom: 10px;
+    }
+
+    html, body {
+        overflow-x: hidden;
+    }
+
+    #navbar #wallet, #navbar #notif, #navbar #expl{
+        display: none;
+    }
+
+    .sidebar a {
+        display: flex;
+    }
+
+    .sidebar a {
+        padding-left: 0;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+
+    #profile {
+        align-self: center;
+        width: auto;
+        margin-right: 0px;
+    }
+
+    #navbar {
+        max-width: 600px;
+    }
+
+    #profile-bar {
+        justify-content: flex-end;
+    }
+
+    #logo-group {
+        display: none;
+    }
+
+    #sidebar-logo {
+        width: 70px;
+        height: 70px;
+        align-self: center;
+    }
+
+    .login, .about-us, .contact-us{
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        color: white;
+        cursor: pointer;
+        padding: 15px 24px;
+        text-decoration: none;
+        font-size: 16px;
+        margin: 5px;
+        margin-left: 20px;
+        margin-right: 20px;
+        background-color: #404a2b;
+        transition: all 0.5s;
+    }
+
+    .sidebar a:hover {
+        background-color: black;
+    }
+
+  
+
+    .side-button-box {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+        position: absolute;
+        left: 30px;
+        top: 50%; 
+        transform: translateY(-50%);
+    }
+
+    .sidebar {
+        position: fixed;
+        top: 0;
+        left: -500px; 
+        width: 250px;
+        height: 100%;
+        background-color: rgba(81, 92, 58, 1);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        transition: left 0.5s ease-in-out;
+        padding-top: 30px;
+    }
+
+    .side-button-box #side-button {
+        width: 30px;
+        height: 30px;
+        padding: 0px;
+        align-self: center;
+        background-color: none;
+    }
+
+    .sidebar #close-button {
+        width: 25px;
+        height: 25px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        transform: translateX(410%);
+    }
+
+    .top-bar-coins {
+        display: none;
+    }
+
+}
