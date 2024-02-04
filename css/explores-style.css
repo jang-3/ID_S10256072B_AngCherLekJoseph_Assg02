@@ -141,6 +141,7 @@ html {
     align-items: center;
     justify-content: flex-end;
     flex-direction: column;
+    background-position: center;
 }
 
 #explore-0 h1 {
@@ -413,6 +414,8 @@ footer .logo-box a:hover {
 }
 
 @media (max-width: 768px) {
+
+
 
     #clover-pic {
         width: 40px;

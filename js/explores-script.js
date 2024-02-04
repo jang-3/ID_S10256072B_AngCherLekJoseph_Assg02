@@ -23,12 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
       const userId = urlParams.get("userId");
       const user = data.find(user => user._id === userId);
       document.querySelector('#expl').addEventListener('click', function(){
-        alert('Works')
         window.location.href = `explores.html?userId=${userId}`;
       });
     
       document.querySelector('#notif').addEventListener('click', function(){
-        alert('Works')
         window.location.href = `notifications.html?userId=${userId}`;
       });
   
@@ -39,6 +37,15 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelector('.about-us').addEventListener('click', function(){
         window.location.href = `notifications.html?userId=${user._id}`;
       });
+
+      document.querySelector('#logo-group').addEventListener('click', function(){
+        window.location.href = `index.html`;
+      });
+
+      document.querySelector('#sidebar-logo').addEventListener('click', function(){
+        window.location.href = `index.html`;
+      });
+
       if (user) {
         const name = document.querySelector('#profile-name');
         if (name) {
