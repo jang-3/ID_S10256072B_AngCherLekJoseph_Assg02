@@ -1,5 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
-    document.querySelectorAll('#product').style.display = 'none'
+    const elements = document.querySelectorAll('#product');
+    for (const element of elements) {
+        element.style.display = 'none';
+    }
     const lottieLoad = document.getElementById('lottie-load');
   
     const urlParams = new URLSearchParams(window.location.search);
