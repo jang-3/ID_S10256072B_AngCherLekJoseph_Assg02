@@ -107,12 +107,16 @@ document.addEventListener('DOMContentLoaded', () => {
             if (height) {
               height.textContent = user.height;
             }
+            const producttitle = document.querySelector('#product-title');
+            if (producttitle) {
+              producttitle.textContent = user.furnituretitle;
+            }
         }
       });
   
       // Hide the original container
       if (lottieLoad) { lottieLoad.style.display = 'none'; }
-      // containerElement.querySelector('.container-3:first-of-type').style.display = 'none'
+      document.querySelectorAll('#product').style.display = 'flex'
   
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
@@ -124,10 +128,9 @@ document.addEventListener('DOMContentLoaded', () => {
         })
       })
   
-      // const hiddenElements = document.querySelectorAll('.container-3');
-      // hiddenElements.forEach((el) => observer.observe(el));
-      // const hiddenElements2 = document.querySelectorAll('.cloned-container-3');
-      // hiddenElements2.forEach((el2) => observer.observe(el2));
+      const hiddenElements = document.querySelectorAll('.selected');
+      hiddenElements.forEach((el) => observer.observe(el));
+
   
     })
     

@@ -31,11 +31,11 @@ document.addEventListener('DOMContentLoaded', () => {
       });
   
       document.querySelector('.login').addEventListener('click', function(){
-        window.location.href = `explores.html?userId=${user._id}`;
+        window.location.href = `explores.html?userId=${userId}`;
       });
     
       document.querySelector('.about-us').addEventListener('click', function(){
-        window.location.href = `notifications.html?userId=${user._id}`;
+        window.location.href = `notifications.html?userId=${userId}`;
       });
 
       document.querySelector('#logo-group').addEventListener('click', function(){
@@ -111,6 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add event listener to new container
       newContainer.addEventListener('click', () => {
         const id = newContainer.dataset._id;
+        const userId = urlParams.get("userId");
         window.open(`/furniture-details.html?id=${userId}.${id}`);
       });
 

@@ -144,7 +144,7 @@ html {
 }
 
 #product {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     padding-right: 70px;
@@ -179,7 +179,7 @@ html {
 
 }
 
-.details {
+#details {
     display: flex;
     flex-direction: column;
     width: auto;
