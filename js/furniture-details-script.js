@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           const coinValue = document.querySelector('#coin-value');
           if (coinValue) {
-            coinValue.textContent = user.coins;
+            coinValue.textContent = `${user.coins} Coins`;
           }
           const profilePic = document.querySelector('#profile-pic');
           if (profilePic) {
@@ -61,6 +61,8 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           console.log('User not found');
         }
+
+        
   
     })
   
@@ -110,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
               producttitle.textContent = user.furnituretitle;
             }
             
-            var threeDEmbedd = document.getElementById('threed-embed');
+            var threeDEmbedd = document.getElementById('threed');
             console.log(user.threedembed); // Add this line
             if (user.threedembed) {
               document.querySelector('#threed-embed').innerHTML = user.threedembed;
@@ -155,6 +157,47 @@ document.addEventListener('DOMContentLoaded', () => {
           var sidebar = document.querySelector('.sidebar');
           sidebar.style.left = '-500px';
       });
+
+    // Get the purchase button
+    const purchaseButton = document.querySelector('#purchase-button');
+
+    // Add click event listener to the purchase button
+    purchaseButton.addEventListener('click', () => {
+      // Get the current user
+      const userId = urlParams.get('id');
+      const user = data.find(user => user._id === userId);
+
+      // Get the price of the current item
+      const price = document.querySelector('#product-price').textContent;
+
+      // Check if the user has enough coins
+      if (user.coins >= price) {
+        // Deduct the price from the user's coins
+        user.coins -= price;
+
+        // Send a POST request to update the user's coins
+        fetch(`https://interbarter-22df.restdb.io/rest/username/${userId}`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-apikey": "65af172e5b0a0385a894cf2c",
+            "Cache-Control": "no-cache"
+          },
+          body: JSON.stringify(user)
+        })
+        .then(response => response.json())
+        .then(updatedUser => {
+          // Update the UI with the new coins value
+          const coinValue = document.querySelector('#coin-value');
+          if (coinValue) {
+            coinValue.textContent = `${updatedUser.coins} Coins`;
+          }
+        })
+        .catch(error => console.error('Error:', error));
+      } else {
+        console.log('User does not have enough coins');
+      }
+    });
   });
   
   
