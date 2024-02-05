@@ -3,8 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const lottieLoad = document.getElementById('lottie-load');
   
     const urlParams = new URLSearchParams(window.location.search);
-    const userId = urlParams.get('id');
     const id = urlParams.get('fid');
+    
   
     let settings = {
       method: "GET", //[cher] we will use post to send info
@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch("https://interbarter-22df.restdb.io/rest/username", settings)
       .then(response => response.json())
       .then(function(data) {
-        const userId = urlParams.get("userId");
+        const userId = urlParams.get('id');
         const user = data.find(user => user._id === userId);
         document.querySelector('#expl').addEventListener('click', function(){
           window.location.href = `explores.html?userId=${userId}`;
@@ -46,9 +46,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
   
         if (user) {
-          const name = document.querySelector('#profile-name');
-          if (name) {
-            name.textContent = user.username;
+          const name2 = document.querySelector('#profile-name');
+          if (name2) {
+            name2.textContent = user.username;
           }
           const coinValue = document.querySelector('#coin-value');
           if (coinValue) {
