@@ -12,13 +12,19 @@ html {
     overflow-y: scroll;
 }
 
-#lottieload {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
-}
+#lottie-load {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
 
 #navbar {
     z-index: 1002;
@@ -165,6 +171,23 @@ html {
     height: 100%;
 }
 
+#threed-embed {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 70px;
+    padding-left: 70px;
+    height: 100%;
+    flex-direction: column;
+    background-color: #404a2b;
+    border-radius: 10px;
+}
+
+.sketchfeb-embed-wrapper {
+    width: 500px;
+    height: auto;
+}
+
 #product-img {
     width: 400px;
     height: 500px;
@@ -189,6 +212,7 @@ html {
     flex-direction: column;
     color: #a8a570;
     line-height: 150%;
+    transition-delay: 200ms;
 
 }
 
@@ -199,6 +223,7 @@ html {
     background-color: #404a2b;
     padding: 30px;
     border-radius: 10px;
+    transition-delay: 400ms;
 }
 
 hr {

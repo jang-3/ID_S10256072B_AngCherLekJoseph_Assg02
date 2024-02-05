@@ -109,6 +109,17 @@ document.addEventListener('DOMContentLoaded', () => {
             if (producttitle) {
               producttitle.textContent = user.furnituretitle;
             }
+            
+            var threeDEmbedd = document.getElementById('threed-embed');
+            console.log(user.threedembed); // Add this line
+            if (user.threedembed) {
+              document.querySelector('#threed-embed').innerHTML = user.threedembed;
+              threeDEmbedd.style.display = 'flex';
+            
+            } else {
+              threeDEmbedd.style.display = 'none';
+
+            }
         }
       });
   
