@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
       newContainer.addEventListener('click', () => {
         const id = newContainer.dataset._id;
         const userId = urlParams.get("userId");
-        window.open(`/furniture-details.html?id=${userId}&fid=${id}`);
+        window.location.href `furniture-details.html?id=${userId}&fid=${id}`;
       });
 
       // Append the new container-3 element to the furniture-demo element
