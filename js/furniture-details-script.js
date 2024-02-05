@@ -1,12 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-
+    document.querySelectorAll('#product').style.display = 'none'
     const lottieLoad = document.getElementById('lottie-load');
   
     const urlParams = new URLSearchParams(window.location.search);
-    const idString = urlParams.get('id');
-    const idParts = idString.split('.');
-    const userId = idParts[0];
-    const id = idParts[1];
+    const userId = urlParams.get('id');
+    const id = urlParams.get('fid');
   
     let settings = {
       method: "GET", //[cher] we will use post to send info
