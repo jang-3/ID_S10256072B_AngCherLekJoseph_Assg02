@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
           }
           const coinValue = document.querySelector('#coin-value');
           if (coinValue) {
-            coinValue.textContent = `${user.coins} Coins`;
+            coinValue.textContent = user.coins;
           }
           const profilePic = document.querySelector('#profile-pic');
           if (profilePic) {
@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             const coinValue = document.querySelector('#product-price');
             if (coinValue) {
-              coinValue.textContent = user.cost;
+              coinValue.textContent = `${user.cost} Coins`;
             }
             const furniturePic = document.querySelector('#product-img');
             if (furniturePic) {
@@ -176,7 +176,7 @@ document.addEventListener('DOMContentLoaded', () => {
         user.coins -= price;
 
         // Send a POST request to update the user's coins
-        fetch(`https://interbarter-22df.restdb.io/rest/username/${userId}`, {
+        fetch(`https://interbarter-22df.restdb.io/rest/username`, {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
