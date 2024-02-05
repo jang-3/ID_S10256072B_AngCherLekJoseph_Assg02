@@ -5,6 +5,7 @@ html, body {
     font-family: 'Poppins', sans-serif;
     display: block;
     background-color: #525c3a;
+    font-size: 20px;
 }
 
 html {
@@ -79,6 +80,8 @@ html {
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    padding-bottom: 2px;
+    padding-top: 2px;
 }
 
 #profile {
@@ -86,7 +89,7 @@ html {
     justify-content: center;
     align-items: center;
     background-color: #647345;
-    padding: 3px 8px;
+    padding: 0px 8px;
     border-radius: 11px;
     margin-right: 20px;
 }
@@ -126,6 +129,8 @@ html {
 #profile-name {
     margin-right: 15px;
     color: white;
+    padding: 0px 0px;
+    height: 20px;
 }
 
 .selected {
@@ -136,6 +141,110 @@ html {
 
 .top-bar-coins {
     display: flex;
+}
+
+#product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 70px;
+    padding-left: 70px;
+    height: 100%;
+}
+
+#product-img {
+    width: 400px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+#img-grp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+#desc-grp {
+    padding: 100px;
+    height: 500px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    color: #a8a570;
+    line-height: 150%;
+
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    background-color: #404a2b;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+hr {
+    width: 100%;
+    height: 5px;
+    border: none;
+    background-color: #647345;
+}
+
+h1, h2 {
+    font-weight: 400;
+}
+
+h1 {
+    font-size: 30px;
+    color: white
+}
+
+h2 {
+    font-size: 20px;
+    color: #fff
+}
+
+#product-header {
+    margin-bottom: 40px;
+}
+
+.details-section {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    color: #e9ce9f;
+    font-weight: 400;
+} 
+
+#details-header {
+    color: white;
+}
+
+#desc-grp div {
+    margin-bottom: 20px;
+}
+
+button {
+    margin: 0px;
+    margin-bottom: 70px;
+    background-color: #404a2b;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {

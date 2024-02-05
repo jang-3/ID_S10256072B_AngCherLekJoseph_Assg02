@@ -176,6 +176,7 @@ section {
     justify-content: space-between;
     height: auto;
     color: #a8a570;
+    align-items: center;
 }
 
 .body-text, .benefits, .benefits-2 .image-desc {
@@ -232,6 +233,7 @@ h1, h2, h3, h4 {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .benefits div {

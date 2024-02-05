@@ -111,7 +111,7 @@ document.addEventListener('DOMContentLoaded', () => {
       // Add event listener to new container
       newContainer.addEventListener('click', () => {
         const id = newContainer.dataset._id;
-        window.open(`/furniture-details.html?id=${id}`);
+        window.open(`/furniture-details.html?id=${userId}.${id}`);
       });
 
       // Append the new container-3 element to the furniture-demo element
