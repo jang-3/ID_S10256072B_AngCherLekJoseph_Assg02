@@ -118,7 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
   
       // Hide the original container
       if (lottieLoad) { lottieLoad.style.display = 'none'; }
-      document.querySelectorAll('#product').style.display = 'flex'
+      const elements2 = document.querySelectorAll('.product');
+        for (const element of elements2) {
+            element.style.display = 'flex';
+        }
   
       const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
