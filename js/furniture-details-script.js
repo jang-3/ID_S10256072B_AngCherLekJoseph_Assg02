@@ -14,8 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
         "Cache-Control": "no-cache"
       }
     }
-  
-  
+
+
     fetch("https://interbarter-22df.restdb.io/rest/username", settings)
       .then(response => response.json())
       .then(function(data) {
@@ -161,43 +161,54 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get the purchase button
     const purchaseButton = document.querySelector('#purchase-button');
 
-    // Add click event listener to the purchase button
-    purchaseButton.addEventListener('click', () => {
-      // Get the current user
-      const userId = urlParams.get('id');
-      const user = data.find(user => user._id === userId);
+    let data;
 
-      // Get the price of the current item
-      const price = document.querySelector('#product-price').textContent;
+    fetch("https://interbarter-22df.restdb.io/rest/username", settings)
+      .then(response => response.json())
+      .then(data => {
+        const userId = urlParams.get('id');
+        const user = data.find(user => user._id === userId);
+        // ... other code to update the UI with user data ...
 
-      // Check if the user has enough coins
-      if (user.coins >= price) {
-        // Deduct the price from the user's coins
-        user.coins -= price;
+        // Add click event listener to the purchase button
+        purchaseButton.addEventListener('click', () => {
+          // Get the current user
+          const userId = urlParams.get('id');
+          const user = data.find(user => user._id === userId);
 
-        // Send a POST request to update the user's coins
-        fetch(`https://interbarter-22df.restdb.io/rest/username`, {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-            "x-apikey": "65af172e5b0a0385a894cf2c",
-            "Cache-Control": "no-cache"
-          },
-          body: JSON.stringify(user)
-        })
-        .then(response => response.json())
-        .then(updatedUser => {
-          // Update the UI with the new coins value
-          const coinValue = document.querySelector('#coin-value');
-          if (coinValue) {
-            coinValue.textContent = `${updatedUser.coins} Coins`;
+          // Get the price of the current item
+          const price = document.querySelector('#product-price').textContent;
+
+          // Check if the user has enough coins
+          if (user.coins >= price) {
+            // Deduct the price from the user's coins
+            user.coins -= price;
+
+            // Send a POST request to update the user's coins
+            fetch(`https://interbarter-22df.restdb.io/rest/username`, {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                "x-apikey": "65af172e5b0a0385a894cf2c",
+                "Cache-Control": "no-cache"
+              },
+              body: JSON.stringify(user)
+            })
+            .then(response => response.json())
+            .then(updatedUser => {
+              // Update the UI with the new coins value
+              const coinValue = document.querySelector('#coin-value');
+              if (coinValue) {
+                coinValue.textContent = `${updatedUser.coins} Coins`;
+              }
+            })
+            .catch(error => console.error('Error:', error));
+          } else {
+            console.log('User does not have enough coins');
           }
-        })
-        .catch(error => console.error('Error:', error));
-      } else {
-        console.log('User does not have enough coins');
-      }
-    });
+        });
+      })
+      .catch(error => console.error('Error:', error));
   });
   
   
