@@ -265,7 +265,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-button {
+#purchase-button {
     margin: 0px;
     margin-bottom: 70px;
     background-color: #404a2b;
@@ -292,7 +292,7 @@ button {
     align-items: center;
 }
 
-button:{
+#purchase-button:hover {
     background-color: black;
 }
 
