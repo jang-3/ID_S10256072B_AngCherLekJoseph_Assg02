@@ -111,7 +111,6 @@ document.addEventListener('DOMContentLoaded', () => {
       if (newImageLink) {
         newImageLink.src = item.imagelink;
       }
-
       // Add event listener to new container
       newContainer.addEventListener('click', () => {
         const id = newContainer.dataset._id;
