@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     for (const element of elements) {
         element.style.display = 'none';
     }
+    
     const lottieLoad = document.getElementById('lottie-load');
   
     const urlParams = new URLSearchParams(window.location.search);
