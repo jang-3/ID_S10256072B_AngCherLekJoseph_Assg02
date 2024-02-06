@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
               }
 
               var threeDEmbedd = document.getElementById('threed');
-              console.log(user.threedembed); // Add this line
+              console.log(user.threedembed); 
               if (user.threedembed) {
                 document.querySelector('#threed-embed').innerHTML = user.threedembed;
                 threeDEmbedd.style.display = 'flex';
