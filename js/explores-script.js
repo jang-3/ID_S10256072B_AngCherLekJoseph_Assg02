@@ -51,10 +51,12 @@ document.addEventListener('DOMContentLoaded', () => {
         if (name) {
           name.textContent = user.username;
         }
-        const coinValue = document.querySelector('#coin-value');
-        if (coinValue) {
-          coinValue.textContent = user.coins;
-        }
+        const coinValues = document.querySelectorAll('.coin-value');
+        coinValues.forEach(coinValue => {
+          if (coinValue) {
+            coinValue.textContent = user.coins;
+          }
+        });
         const profilePic = document.querySelector('#profile-pic');
         if (profilePic) {
           profilePic.src = user.profileimagelink;
