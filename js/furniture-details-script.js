@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   let settings2 = {
-    method: "GET", //[cher] we will use post to send info
+    method: "POST", //[cher] we will use post to send info
     headers: {
       "Content-Type": "application/json",
       "x-apikey": "65af172e5b0a0385a894cf2c",
@@ -200,16 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.querySelector('#product-seller').textContent; 
             const user = data.find(user => user.username === name);
             if (user) {
-              user.coins = user.coins += price;
-              fetch(`https://interbarter-22df.restdb.io/rest/username`, {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                  "x-apikey": "65af172e5b0a0385a894cf2c",
-                  "Cache-Control": "no-cache"
-                },
-                body: JSON.stringify(user)
-              });
+              user.coins += price;
             }
           })
           .catch(error => console.error('Error:', error));
