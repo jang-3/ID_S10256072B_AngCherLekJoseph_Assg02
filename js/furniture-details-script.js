@@ -13,6 +13,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  let settings2 = {
+    method: "GET", //[cher] we will use post to send info
+    headers: {
+      "Content-Type": "application/json",
+      "x-apikey": "65af172e5b0a0385a894cf2c",
+      "Cache-Control": "no-cache"
+    }
+  }
+
   fetch("https://interbarter-22df.restdb.io/rest/username", settings)
     .then(response => response.json())
     .then(function(data) {
@@ -163,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
           // Deduct the price from the user's coins
           user.coins -= price;
 
+
           // Send a POST request to update the user's coins
           fetch(`https://interbarter-22df.restdb.io/rest/username`, {
             method: "POST",
@@ -180,6 +190,26 @@ document.addEventListener('DOMContentLoaded', () => {
             const coinValue = document.querySelector('#coin-value');
             if (coinValue) {
               coinValue.textContent = `${updatedUser.coins} Coins`;
+            }
+          })
+
+          fetch("https://interbarter-22df.restdb.io/rest/username", settings2)
+          
+          .then(response => response.json())
+          .then(function(data) {
+            const name = document.querySelector('#product-seller').textContent; 
+            const user = data.find(user => user.username === name);
+            if (user) {
+              user.coins = user.coins -= price;
+              return fetch(`https://interbarter-22df.restdb.io/rest/username`, {
+                method: "PUT",
+                headers: {
+                  "Content-Type": "application/json",
+                  "x-apikey": "65af172e5b0a0385a894cf2c",
+                  "Cache-Control": "no-cache"
+                },
+                body: JSON.stringify(user)
+              });
             }
           })
           .catch(error => console.error('Error:', error));
