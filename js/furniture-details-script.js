@@ -201,7 +201,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const user = data.find(user => user.username === name);
             if (user) {
               user.coins = user.coins -= price;
-              return fetch(`https://interbarter-22df.restdb.io/rest/username`, {
+              fetch(`https://interbarter-22df.restdb.io/rest/username`, {
                 method: "PUT",
                 headers: {
                   "Content-Type": "application/json",
