@@ -200,7 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const name = document.querySelector('#product-seller').textContent; 
             const user = data.find(user => user.username === name);
             if (user) {
-              user.coins = user.coins -= price;
+              user.coins = user.coins += price;
               fetch(`https://interbarter-22df.restdb.io/rest/username`, {
                 method: "POST",
                 headers: {
