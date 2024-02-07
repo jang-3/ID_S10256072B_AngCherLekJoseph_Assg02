@@ -13,15 +13,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  let settings2 = {
-    method: "POST", //[cher] we will use post to send info
-    headers: {
-      "Content-Type": "application/json",
-      "x-apikey": "65af172e5b0a0385a894cf2c",
-      "Cache-Control": "no-cache"
-    }
-  }
-
   fetch("https://interbarter-22df.restdb.io/rest/username", settings)
     .then(response => response.json())
     .then(function(data) {
@@ -193,16 +184,33 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           })
 
-          fetch("https://interbarter-22df.restdb.io/rest/username", settings2)
-          
-          .then(response => response.json())
-          .then(function(data) {
-            const name = document.querySelector('#product-seller').textContent; 
-            const user = data.find(user => user.username === name);
-            if (user) {
-              user.coins += price;
+          let settings2 = {
+            method: "GET", //[cher] we will use post to send info
+            headers: {
+              "Content-Type": "application/json",
+              "x-apikey": "65af172e5b0a0385a894cf2c",
+              "Cache-Control": "no-cache"
             }
-          })
+          }
+
+          fetch("https://interbarter-22df.restdb.io/rest/username", settings2)
+            .then(response => response.json())
+            .then(function(data) {
+              const name = document.querySelector('#product-seller').textContent; 
+              const user = data.find(user => user.username === name);
+              if (user) {
+                user.coins += price;
+                return fetch(`https://interbarter-22df.restdb.io/rest/username`, {
+                  method: "POST",
+                  headers: {
+                    "Content-Type": "application/json",
+                    "x-apikey": "65af172e5b0a0385a894cf2c",
+                    "Cache-Control": "no-cache"
+                  },
+                  body: JSON.stringify(user)
+                });
+              }
+            })
           .catch(error => console.error('Error:', error));
         } else {
           alert('User does not have enough coins');
