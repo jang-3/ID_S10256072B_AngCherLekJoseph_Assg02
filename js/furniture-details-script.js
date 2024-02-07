@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (user) {
               user.coins = user.coins -= price;
               fetch(`https://interbarter-22df.restdb.io/rest/username`, {
-                method: "PUT",
+                method: "POST",
                 headers: {
                   "Content-Type": "application/json",
                   "x-apikey": "65af172e5b0a0385a894cf2c",
