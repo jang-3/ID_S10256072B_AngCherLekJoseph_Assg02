@@ -1,4 +1,7 @@
 
+// This smooth scroll code is not by me. It is by Manuel Otto on Stack Overflow.
+// https://stackoverflow.com/questions/47011055/smooth-vertical-scrolling-on-mouse-wheel-in-vanilla-javascript
+
 function init(){
 	new SmoothScroll(document,20,35)
 }
@@ -68,11 +71,14 @@ function SmoothScroll(target, speed, smooth) {
 	}()
 }
 
+// End of smooth scroll code
 
+// Sticky Bar Code is not by me, it is from w3schools and modified by me
+// https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 
 window.onscroll = function() {myFunction()};
 
-var navbar = document.getElementById("navbar");
+var navbar = document.getElementById("navbar"); 
 var sticky = navbar.offsetTop;
 
 function myFunction() {
@@ -101,10 +107,10 @@ hiddenElements2.forEach((el2) => observer.observe(el2));
 const hiddenElements3 = document.querySelectorAll('.selected-up');
 hiddenElements3.forEach((el3) => observer.observe(el3));
 
-var sellerData = [];
+// End of Sticky Bar Code
 
 let settings = {
-	method: "GET", //[cher] we will use post to send info
+	method: "GET", 
 	headers: {
 	  "Content-Type": "application/json",
 	  "x-apikey": "65af172e5b0a0385a894cf2c",
@@ -112,10 +118,7 @@ let settings = {
 	}
 }
 
-
-  //[STEP 5]: Send our AJAX request over to the DB and print response of the RESTDB storage to console.
-  fetch("https://interbarter-22df.restdb.io/rest/seller", settings)
-
+  fetch("https://interbarter-22df.restdb.io/rest/seller", settings) // Editing the Furniture card data (#container-3)
 	.then(response => response.json())
 	.then(function(data) {
 		const containers = document.querySelectorAll('#container-3');

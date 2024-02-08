@@ -1,28 +1,24 @@
-document.addEventListener('DOMContentLoaded', () => {
-
+document.addEventListener('DOMContentLoaded', () => { // Wait for document to load
   const lottieLoad = document.getElementById('lottie-load');
   const containerElement = document.querySelector('.furniture-demo');
   const searchInput = document.querySelector('.search-container input[type="search"]');
-
   const queryString = window.location.search;
   const urlParams = new URLSearchParams(queryString)
 
   let settings = {
-    method: "GET", //[cher] we will use post to send info
+    method: "GET", 
     headers: {
       "Content-Type": "application/json",
       "x-apikey": "65af172e5b0a0385a894cf2c",
       "Cache-Control": "no-cache"
     }
   }
-
-
   fetch("https://interbarter-22df.restdb.io/rest/username", settings)
     .then(response => response.json())
     .then(function(data) {
       const userId = urlParams.get("userId");
       const user = data.find(user => user._id === userId);
-      document.querySelector('#expl').addEventListener('click', function(){
+      document.querySelector('#expl').addEventListener('click', function(){ // Add links to Navigation Bar
         window.location.href = `explores.html?userId=${userId}`;
       });
     
@@ -47,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
       });
 
       if (user) {
-        const name = document.querySelector('#profile-name');
+        const name = document.querySelector('#profile-name'); // Update Profile Data
         if (name) {
           name.textContent = user.username;
         }
@@ -137,12 +133,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       })
     })
-
     const hiddenElements = document.querySelectorAll('.container-3');
     hiddenElements.forEach((el) => observer.observe(el));
     const hiddenElements2 = document.querySelectorAll('.cloned-container-3');
     hiddenElements2.forEach((el2) => observer.observe(el2));
-    
     // Add search functionality
     searchInput.addEventListener('input', () => {
       const searchTerm = searchInput.value.toLowerCase();
@@ -158,17 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
-
   })
-  
   .catch(error => console.error('Error:', error));
-
     // Button click event
     document.querySelector('#side-button').addEventListener('click', function(){
       var sidebar = document.querySelector('.sidebar');
       sidebar.style.left = '0px';
     });
-    
     // Close button click event
     document.querySelector('#close-button').addEventListener('click', function(){
         var sidebar = document.querySelector('.sidebar');

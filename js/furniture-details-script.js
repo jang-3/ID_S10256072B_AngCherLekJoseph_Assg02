@@ -1,24 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
   const lottieLoad = document.getElementById('lottie-load');
-
-  const urlParams = new URLSearchParams(window.location.search);
+  const urlParams = new URLSearchParams(window.location.search); // Get sent data from URL
   const id = urlParams.get('fid');
-
   let settings = {
-    method: "GET", //[cher] we will use post to send info
+    method: "GET",
     headers: {
       "Content-Type": "application/json",
       "x-apikey": "65af172e5b0a0385a894cf2c",
       "Cache-Control": "no-cache"
     }
   }
-
   fetch("https://interbarter-22df.restdb.io/rest/username", settings)
     .then(response => response.json())
     .then(function(data) {
       const userId = urlParams.get('id');
       const user = data.find(user => user._id === userId);
-      document.querySelector('#expl').addEventListener('click', function(){
+      document.querySelector('#expl').addEventListener('click', function(){ // Add links to navigation bar
         window.location.href = `explores.html?userId=${userId}`;
       });
 
@@ -42,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = `index.html`;
       });
 
-      if (user) {
+      if (user) { // Update profile values
         const name2 = document.querySelector('#profile-name');
         if (name2) {
           name2.textContent = user.username;
@@ -74,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         data.forEach((item, index) => {
           const user = data.find(user => user._id === id);
           if (user) {
-              const name = document.querySelector('#product-seller');
+              const name = document.querySelector('#product-seller'); // Get data and put data of product into the page
               if (name) {
                 name.textContent = user.name;
               }
@@ -107,7 +104,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 producttitle.textContent = user.furnituretitle;
               }
 
-              var threeDEmbedd = document.getElementById('threed');
+              var threeDEmbedd = document.getElementById('threed'); // Add 3D Model
               console.log(user.threedembed); 
               if (user.threedembed) {
                 document.querySelector('#threed-embed').innerHTML = user.threedembed;
@@ -132,10 +129,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           })
         })
-
         const hiddenElements = document.querySelectorAll('.selected');
         hiddenElements.forEach((el) => observer.observe(el));
-
       })
       .catch(error => console.error('Error:', error));
 
@@ -162,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
           // Deduct the price from the user's coins
           user.coins -= price;
-
+          alert('Thank you for your purchase.');
 
           // Send a POST request to update the user's coins
           fetch(`https://interbarter-22df.restdb.io/rest/username`, {
@@ -185,7 +180,7 @@ document.addEventListener('DOMContentLoaded', () => {
           })
 
           let settings2 = {
-            method: "GET", //[cher] we will use post to send info
+            method: "GET",
             headers: {
               "Content-Type": "application/json",
               "x-apikey": "65af172e5b0a0385a894cf2c",
@@ -193,13 +188,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
           }
 
-          fetch("https://interbarter-22df.restdb.io/rest/username", settings2)
+          fetch("https://interbarter-22df.restdb.io/rest/username", settings2) // Update Seller's Clover Coins
             .then(response => response.json())
             .then(function(data) {
               const name = document.querySelector('#product-seller').textContent; 
               const user = data.find(user => user.username === name);
               if (user) {
-                parseFloat(user.coins) += price;
+                parseFloat(user.coins) += price; 
                 return fetch(`https://interbarter-22df.restdb.io/rest/username`, {
                   method: "POST",
                   headers: {
@@ -216,11 +211,9 @@ document.addEventListener('DOMContentLoaded', () => {
           alert('User does not have enough coins');
         }
       });
-
     })
     .catch(error => console.error('Error:', error));
-
-  // Button click event
+  // Button click event (Mobile)
   document.querySelector('#side-button').addEventListener('click', function(){
     var sidebar = document.querySelector('.sidebar');
     sidebar.style.left = '0px';
