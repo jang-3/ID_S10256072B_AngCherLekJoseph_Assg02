@@ -206,7 +206,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
               }
             })
-          .catch(error => console.error('Error:', error));
         } else {
           alert('User does not have enough coins');
         }
