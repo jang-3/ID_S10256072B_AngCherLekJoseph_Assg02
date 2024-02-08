@@ -119,6 +119,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Hide the original container
         if (lottieLoad) { lottieLoad.style.display = 'none'; }
 
+        // Animation transition is not by me, it is from Beyond Fireship on Youtube and modified by me.
+        // https://www.youtube.com/watch?v=T33NN_pPeNI
+
         const observer = new IntersectionObserver((entries) => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
@@ -130,6 +133,8 @@ document.addEventListener('DOMContentLoaded', () => {
         })
         const hiddenElements = document.querySelectorAll('.selected');
         hiddenElements.forEach((el) => observer.observe(el));
+
+        // End of Animation Transition
       })
       .catch(error => console.error('Error:', error));
 

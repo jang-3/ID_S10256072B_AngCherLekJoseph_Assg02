@@ -124,6 +124,9 @@ document.addEventListener('DOMContentLoaded', () => { // Wait for document to lo
     if (lottieLoad) { lottieLoad.style.display = 'none'; }
     containerElement.querySelector('.container-3:first-of-type').style.display = 'none'
 
+    // Animation transition is not by me, it is from Beyond Fireship on Youtube and modified by me.
+    // https://www.youtube.com/watch?v=T33NN_pPeNI
+
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -137,6 +140,8 @@ document.addEventListener('DOMContentLoaded', () => { // Wait for document to lo
     hiddenElements.forEach((el) => observer.observe(el));
     const hiddenElements2 = document.querySelectorAll('.cloned-container-3');
     hiddenElements2.forEach((el2) => observer.observe(el2));
+    // End of Animation Transition
+
     // Add search functionality
     searchInput.addEventListener('input', () => {
       const searchTerm = searchInput.value.toLowerCase();

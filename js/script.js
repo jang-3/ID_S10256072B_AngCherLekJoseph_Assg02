@@ -73,7 +73,7 @@ function SmoothScroll(target, speed, smooth) {
 
 // End of smooth scroll code
 
-// Sticky Bar Code is not by me, it is from w3schools and modified by me
+// Sticky Bar Code is not by me, it is from w3schools and modified by me.
 // https://www.w3schools.com/howto/howto_js_navbar_sticky.asp
 
 window.onscroll = function() {myFunction()};
@@ -89,6 +89,10 @@ function myFunction() {
   }
 }
 
+// End of Sticky Bar Code
+
+// Animation transition is not by me, it is from Beyond Fireship on Youtube and modified by me.
+// https://www.youtube.com/watch?v=T33NN_pPeNI
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
@@ -107,7 +111,7 @@ hiddenElements2.forEach((el2) => observer.observe(el2));
 const hiddenElements3 = document.querySelectorAll('.selected-up');
 hiddenElements3.forEach((el3) => observer.observe(el3));
 
-// End of Sticky Bar Code
+// End of Animation Transition
 
 let settings = {
 	method: "GET", 
