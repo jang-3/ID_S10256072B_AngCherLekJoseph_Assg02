@@ -212,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     })
+    
     .catch(error => console.error('Error:', error));
   // Button click event (Mobile)
   document.querySelector('#side-button').addEventListener('click', function(){
