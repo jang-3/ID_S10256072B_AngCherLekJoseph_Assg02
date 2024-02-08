@@ -10,13 +10,13 @@ p {
 
 }
 
-.selected {
+.selected { /* Selected for animations */
     transform: translateY(10%);
     opacity: 0;
     transition: all 1s;
 }
 
-.selected-up {
+.selected-up { /* Different transition */
     transform: translateY(-20%);
     opacity: 0;
     transition: all 1s;
@@ -28,7 +28,7 @@ p {
     transition: all 1s;
 }
   
-#background-container {
+#background-container { /* Background */
     height: 100%;
     width: 100%;
     justify-content: center;
@@ -42,7 +42,7 @@ p {
     height: 100px;
 }
 
-#login-title {
+#login-title { /* Different transition time */
     transition-delay: 150ms;
 }
 
@@ -111,7 +111,7 @@ p {
     color: white;
 }
 
-.login-box input[type="submit"] {
+.login-box input[type="submit"] { /* Button for submit */
     margin-top: 50px;
     margin-bottom: 70px;
     background-color: #525c3a;

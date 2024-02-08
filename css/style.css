@@ -10,7 +10,7 @@ body {
     width: 100%;
 }
 
-.header {
+.header { /* Background image with "Get Started" and other elements */
     display: flex;
     text-align: center;
     align-items: center;
@@ -41,7 +41,7 @@ body {
     margin-bottom: 0px;
 }
 
-#real-title {
+#real-title { /* Title in background */
     margin: 0px;
     justify-self: center;
     align-self: center;
@@ -51,7 +51,7 @@ body {
     letter-spacing: -2px;
 }
 
-#subtitle {
+#subtitle { /* Subtitle in background */
     transition-delay: 500ms;
     margin: 0px;
     font-size: 20px;
@@ -116,7 +116,7 @@ section {
     justify-content: center;
 }
 
-#navbar {
+#navbar { /* The Navigation Bar, Sticky */
     overflow: hidden;
     z-index: 1000;
     left: 0;
@@ -159,7 +159,7 @@ section {
     padding-bottom: 10px;
 }
 
-.sticky {
+.sticky { /* Stick the Nav Bar */
     position: fixed;
     top: 0;
     width: 100%;
@@ -169,7 +169,7 @@ section {
     padding-top: 80px;
 }
 
-.content {
+.content { /* Main content of the page */
     margin-top: 200px;
     display: flex;
     flex-direction: column;
@@ -185,25 +185,25 @@ section {
     padding-right: 100px;
 }
 
-.content > * {
+.content > * { /* Select children content for transition purposes */
     transform: translateY(10%);
     opacity: 0;
     transition: all 1s;
 }
 
-.selected {
+.selected { /* Selected for transition */
     transform: translateY(10%);
     opacity: 0;
     transition: all 1s;
 }
 
-.selected-up {
+.selected-up { /* Different kind of transition */
     transform: translateY(-20%);
     opacity: 0;
     transition: all 1s;
 }
 
-.show {
+.show { /* Show the transited element */
     transform: translateY(0);
     opacity: 1;
     transition: all 1s;
@@ -294,7 +294,7 @@ h1, h2, h3, h4 {
     margin-right: 120px;
 }
 
-#container-3:nth-child(2) {
+#container-3:nth-child(2) { /* Set different animation delays for each of the containers */
     transition-delay: 100ms;
 }
 
@@ -352,7 +352,7 @@ hr {
     margin: 0px;
 }
 
-#container-3 {
+#container-3 { /* The formatting for how a furniture card looks like */
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -369,7 +369,7 @@ hr {
 
 }
 
-.explore {
+.explore { /* A peak at the furniture sold */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -412,7 +412,7 @@ hr {
 
 #container-3:hover {
     transform: translateY(-5%);
-    box-shadow: 10px 10px 20px 0px rgba(9, 9, 9, 0.3)
+    box-shadow: 10px 10px 20px 0px rgba(9, 9, 9, 0.3) /* Hover */
 }
 
 #explore-img {
@@ -470,7 +470,7 @@ hr {
     transform: translateX(-20px);
 }
 
-footer {
+footer { /* Footer */
     background-color: black;
     padding-top: 50px;
     padding-bottom: 90px;
@@ -483,7 +483,8 @@ footer {
     width: 100%;
     overflow-x: hidden;
 }
-footer a {
+
+footer a { 
     color: grey;
     text-decoration: none;
     margin: 0 5px;
@@ -551,7 +552,7 @@ footer .logo-box a:hover {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Media Queries */
     .benefits div, .benefits-2, .furniture-demo {
         flex-wrap: wrap;
         max-width: 500px;
@@ -607,12 +608,6 @@ footer .logo-box a:hover {
 
     body {
         overflow-x: hidden !important;
-    }
-
-    
-
-    .header {
-
     }
 
     .furniture-demo {

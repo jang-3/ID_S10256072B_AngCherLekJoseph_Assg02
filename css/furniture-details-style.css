@@ -12,7 +12,7 @@ html {
     overflow-y: scroll;
 }
 
-#lottie-load {
+#lottie-load { /* Lottie Animation */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@ html {
     z-index: 1000;
   }
 
-#navbar {
+#navbar { /* The Navigation Bar */
     z-index: 1002;
     left: 0;
     right: 0;
@@ -46,11 +46,11 @@ html {
     position: fixed;
 }
 
-.side-button-box {
-    display: none;
+.side-button-box { /* Hide mobile bar */
+    display: none; 
 }
 
-.sidebar {
+.sidebar { /* Hide mobile bar */
     display: none;
 }
 
@@ -77,7 +77,7 @@ html {
     color: white;
 }
 
-#logo-white {
+#logo-white { /* Logo */
     width: 50px;
     height: 50px;
 }
@@ -146,13 +146,13 @@ html {
     height: 20px;
 }
 
-.selected {
+.selected { /* Selected for transition */
     transform: translateY(-100px);
     opacity: 0;
     transition: all 1s;
 }
 
-.show {
+.show { /* Carry out the animation */
     transform: translateY(0);
     opacity: 1;
     transition: all 1s;
@@ -173,7 +173,7 @@ html {
     height: 10px;
 }
 
-#threed {
+#threed { /* threed = Three D = 3D */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -214,7 +214,7 @@ html {
 
 }
 
-#details {
+#details { /* Furniture Details */
     display: flex;
     flex-direction: column;
     width: auto;
@@ -265,7 +265,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-#purchase-button {
+#purchase-button { /* Button to purchase */
     margin: 0px;
     margin-bottom: 70px;
     background-color: #404a2b;
@@ -297,7 +297,7 @@ h2 {
     background-color: black;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Media Queries */
 
 
 
@@ -316,7 +316,7 @@ h2 {
         overflow-x: hidden;
     }
 
-    #navbar #wallet, #navbar #notif, #navbar #expl{
+    #navbar #wallet, #navbar #notif, #navbar #expl{ /* Hide certain elements on the navigation bar */
         display: none;
     }
 
@@ -354,7 +354,7 @@ h2 {
         align-self: center;
     }
 
-    .login, .about-us, .contact-us{
+    .login, .about-us, .contact-us{ /* These correspond to positions on the top bar */
         border: none;
         outline: none;
         border-radius: 5px;
@@ -437,7 +437,7 @@ h2 {
         margin-bottom: 50px;
     }
 
-    #threed {
+    #threed { /* (again, 3D xD) */
         flex-direction: column;
         margin-top: 50px;
         margin-left: 43px;

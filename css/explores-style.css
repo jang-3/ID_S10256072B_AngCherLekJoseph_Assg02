@@ -12,7 +12,7 @@ html {
 }
 
 
-#navbar {
+#navbar { /* Navigation Bar */
     z-index: 1002;
     left: 0;
     right: 0;
@@ -36,7 +36,7 @@ html {
     display: none;
 }
 
-.sidebar {
+.sidebar { /* Hide mobile bar */
     display: none;
 }
 
@@ -128,13 +128,13 @@ html {
     color: white;
 }
 
-.selected {
+.selected { /* Selected for animation */
     transform: translateY(-100px);
     opacity: 0;
     transition: all 1s;
 }
 
-#explore-0 {
+#explore-0 { /* Background with "Explore" text */
     padding-top: 10px;
     padding-bottom: 10px;
     margin: 0px;
@@ -160,7 +160,7 @@ html {
     box-shadow: 10px 10px 20px 0px rgba(9, 9, 9, 0.3)
 }
 
-#searchbar {
+#searchbar { /* Search Bar Div */
     overflow: hidden;
     z-index: 1000;
     display: flex;
@@ -180,7 +180,7 @@ html {
     justify-content: center;
 }
   
-.search-container input[type="search"] {
+.search-container input[type="search"] { /* Search Bar Styling */
     width: 500px;
     padding: 15px 30px;
     border: 3px solid rgb(57, 65, 42);
@@ -229,7 +229,7 @@ input[type="search"]::placeholder {
     padding-top: 500px;
 }
 
-#explore {
+#explore { /* Explore-0 precedes Explore, this is now the content */
     padding-top: 10px;
     padding-bottom: 10px;
     display: flex;
@@ -249,7 +249,7 @@ input[type="search"]::placeholder {
     justify-content: center;
 }
 
-.container-3 {
+.container-3 { /* Default Styling for Furniture card */
     transform: translateY(10%);
     opacity: 0;
     transition: all 1s;
@@ -271,7 +271,7 @@ input[type="search"]::placeholder {
 }
 
 
-.show {
+.show { /* Transition animation from hide to show */
     transform: translateY(0);
     opacity: 1;
     transition: all 1s;
@@ -322,7 +322,7 @@ input[type="search"]::placeholder {
     z-index: 99;
 }
 
-.desc {
+.desc { 
     font-size: 12px;
     display: flex;
     flex-direction: row;
@@ -334,7 +334,7 @@ input[type="search"]::placeholder {
     color: white;
 }
 
-footer {
+footer { /* Footer */
     background-color: black;
     padding-top: 50px;
     padding-bottom: 90px;
@@ -419,7 +419,7 @@ footer .logo-box a:hover {
     display: flex;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) { /* Media Queries */
 
 
 
@@ -438,7 +438,7 @@ footer .logo-box a:hover {
         overflow-x: hidden;
     }
 
-    #navbar #wallet, #navbar #notif, #navbar #expl{
+    #navbar #wallet, #navbar #notif, #navbar #expl{ /* Hide elements from the original navigation bar */
         display: none;
     }
 
@@ -473,7 +473,7 @@ footer .logo-box a:hover {
         display: none;
     }
 
-    .search-container input[type="search"] {
+    .search-container input[type="search"] { /* Search Bar */
         width: 300px;
         padding: 10px 20px;
         margin-right: 20px;
@@ -518,7 +518,7 @@ footer .logo-box a:hover {
         transform: translateY(-50%);
     }
 
-    .sidebar {
+    .sidebar { /* mobile bar, unhidden, styled */
         position: fixed;
         top: 0;
         left: -500px; 
@@ -552,7 +552,7 @@ footer .logo-box a:hover {
         display: none;
     }
 
-    footer {
+    footer { /* Footer */
         flex-direction: column;
         justify-content: center;
         align-items: center;
