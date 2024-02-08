@@ -193,6 +193,7 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(function(data) {
               const name = document.querySelector('#product-seller').textContent; 
               const user = data.find(user => user.username === name);
+              const price = parseFloat(document.querySelector('#product-price').textContent);
               if (user) {
                 parseFloat(user.coins) += price; 
                 return fetch(`https://interbarter-22df.restdb.io/rest/username`, {
