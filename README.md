@@ -226,3 +226,6 @@ Jaykin —
 - https://www.castlery.com/sg/products/cammy-armchair?material=tan&quantity=single
 - https://images.pexels.com/photos/1125137/pexels-photo-1125137.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
 - https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+
+### Acknowledgments 
+I received inspiration for this project from Carousell and Fortytwo.
