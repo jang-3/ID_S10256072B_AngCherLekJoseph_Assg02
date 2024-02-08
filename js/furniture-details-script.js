@@ -168,6 +168,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             body: JSON.stringify(user)
           })
+
           .then(response => response.json())
           .then(updatedUser => {
             
