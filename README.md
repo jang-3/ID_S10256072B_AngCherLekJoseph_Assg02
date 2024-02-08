@@ -1,4 +1,5 @@
 # Interbarter
+github.com/jang-3/Interbarter
 
 ### Goal: To help users of Interbarter transfer their furniture and pay/receive their due Clover coins, as well as to portray the company in a good light through the landing page. 
 
@@ -181,12 +182,13 @@ The project uses the font Poppins from Google Fonts.
 Thus far, the website works fine on Chrome, Safari, Microsoft Edge, Brave, and Opera browsers. The website resizes nicely on mobile, with shifting elements and resizing them to maintain a clean feel. 
 
 ### Problems
-RestDB often will limit access for multiple hours if you call it too many times (you can access it again around 6-7 pm SGT so time of limited access varies) 
+- RestDB often will limit access for multiple hours if you call it too many times (you can access it again around 6-7 pm SGT so time of limited access varies) 
+- Due to issues of syncing a local computer file system with github, and the fact that making live a repository sends too many API requests to RestDB, I have resorted to more frequent commits in order to test out database-related issues and some commits may not have very detailed names. 
 
 ### Individual Contributions and roles
 #### Roles
-Joseph — Front end developer, Back end developer, Brand Designer
-Jaykin — Front end developer
+- Joseph — Front end developer, Back end developer, Brand Designer
+- Jaykin — Front end developer
 
 #### Contributions
 Joseph — Everything* that you see is done by me. This includes: 
