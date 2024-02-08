@@ -155,7 +155,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (parseFloat(user.coins) >= price) {
 
           // Deduct the price from the user's coins
-          parseFloat(user.coins) -= price;
+          user.coins -= price;
           alert('Thank you for your purchase.');
 
           // Send a POST request to update the user's coins
